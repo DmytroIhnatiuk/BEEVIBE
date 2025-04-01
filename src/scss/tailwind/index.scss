@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.nav-list {
+		@apply mb-12 lg:mb-0 px-12 py-8 bg-transparent lg:hover:bg-light-orange transition-colors duration-300 ease-linear rounded-30;
+	}
+
+	.btn-black {
+		@apply font-semibold py-8 sm:py-16 px-40 rounded-30 text-white bg-black border border-black border-solid lg:hover:bg-transparent lg:hover:text-black duration-300 transition-colors ease-linear flex-center active:bg-transparent active:text-black;
+	}
+	.btn-black-orange {
+		@apply font-semibold py-16 px-40 rounded-30 text-white bg-black  lg:hover:bg-orange lg:hover:text-black duration-300 transition-colors ease-linear flex-center active:bg-orange active:text-black;
+	}
+	.slider-btn {
+		@apply size-40 p-12 sm:p-20 sm:size-[.62rem] border-black border-solid border rounded lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300 ease-linear relative inline-block  active:bg-light-orange active:border-light-orange;
+	}
+}
+@layer utilities {
+	.orange-gradient {
+		background: var(--orange-gradient);
+	}
+
+	.box-shadow {
+		box-shadow: 0px 10px 10px 0px rgba(49, 45, 43, 0.15);
+	}
+	.text-clamp_2 {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		-webkit-line-clamp: 2;
+	}
+}

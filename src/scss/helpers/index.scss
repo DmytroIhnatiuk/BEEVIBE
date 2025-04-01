@@ -1,0 +1,20 @@
+@import 'h';
+
+.header-hidden {
+	transform: translateY(-100%);
+}
+
+.swiper-pagination-bullet {
+	background: transparent !important;
+	border: var(--black) 1px solid !important;
+	opacity: 1 !important;
+	width: 0.12rem !important;
+	height: 0.12rem !important;
+}
+.swiper-pagination-bullet-active {
+	background: var(--black) !important;
+}
+.swiper-button-disabled {
+	border: none;
+	pointer-events: none;
+}

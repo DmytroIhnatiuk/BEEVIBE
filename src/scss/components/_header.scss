@@ -1,0 +1,48 @@
+header,
+.header {
+	position: fixed;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		left: 0;
+		bottom: 0;
+		background-color: transparent;
+		transition: background-color 0.6s ease-in;
+		z-index: -1;
+		opacity: 0.9;
+	}
+
+	&.active {
+		@media all and (max-width: 640px) {
+			.header-logo {
+				fill: var(--orange);
+				position: relative;
+				z-index: 100;
+			}
+		}
+
+		.menu {
+			transform: translateX(-3.75rem);
+			color: white;
+			.nav-list {
+				&.active {
+					background: var(--orange);
+					color: var(--black);
+				}
+			}
+		}
+		@media all and (min-width: 640px) {
+			.menu {
+				transform: translateX(-4.35rem);
+			}
+		}
+
+		.active-none {
+			display: none !important;
+		}
+	}
+}
