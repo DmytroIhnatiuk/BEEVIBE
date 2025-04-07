@@ -63,7 +63,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		const toSlider = document.querySelector('#toSlider')
 		toSlider.style.zIndex = Number(currentTarget.value) <= 0 ? 2 : 0
 	}
-
 	fromInput.innerHTML = fromSlider.value + ' грн'
 	toInput.innerHTML = toSlider.value + ' грн'
 	fillSlider(fromSlider, toSlider, '#F3F3F3', '#252525', toSlider)
