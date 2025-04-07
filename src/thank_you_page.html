@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ua">
+	@@include('html/_head.html',{ "title":"thank_you_page" })
+	<body class="body text-dark-blue">
+		<div class="page-container">
+			@@include('html/_header.html',{})
+			<main>
+				<section
+					class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
+				>
+					<div class="container">
+						<div class="grid lg:grid-cols-2 gap-20">
+							<div
+								class="w-full lg:min-h-[5rem] rounded-20 bg-orange p-24 sm:p-32 lg:p-[.76rem]"
+							>
+								<div
+									class="sm:mx-auto image w-[.72rem] h-[.66rem] mb-16 sm:mb-40"
+								>
+									<img src="@img/logo bee vibe.png" alt="logo" />
+								</div>
+								<h1 class="h2 sm:text-center mb-16">
+									Дякуємо, що обираєте BeeVibe!
+								</h1>
+								<p class="font-semibold sm:text-center mb-16 sm:mb-24">
+									Залиште відгук – ваша думка дуже важлива для нас! Поділіться
+									враженнями в нашому Інстаграм
+								</p>
+								<a
+									href="#"
+									class="sm:mx-auto btn-black py-8 w-max pr-8 gap-16 group"
+									><span>Інстаграм</span>
+									<span
+										href="#"
+										class="size-40 p-4 rounded lg:flex items-center justify-center transition-colors duration-300 border border-solid border-white group-hover:border-black"
+									>
+										<svg
+											class="size-full group-hover:fill-black transition-colors duration-300 ease-linear fill-white"
+										>
+											<use href="#instagram-icon"></use>
+										</svg> </span
+								></a>
+							</div>
+							<div class="image rounded-20 overflow-hidden pt-[90%] lg:pt-0">
+								<img
+									class="object-cover"
+									src="@img/IMG_4156.png"
+									alt="thank_you"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			@@include('html/_footer.html',{})
+		</div>
+		@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
+		<script src="js/app.min.js"></script>
+		<script src="js/home.min.js"></script>
+	</body>
+</html>

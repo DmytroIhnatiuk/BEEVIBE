@@ -1,20 +1,111 @@
+<!-- <div
+	class="bg-bg box-shadow sm:px-100 px-16 py-24 sm:py-40 max-w-[11.3rem] absolute top-14 lg:top-16 z-[100] right-0 rounded-l-30 w-full"
+	id="cart"
+>
+	<div class="flex items-center gap-24 mb-24">
+		<h2>У кошику</h2>
+		<div class="flex items-center">
+			<div class="rounded size-32 flex-center bg-light-orange mr-6">3</div>
+			<span>товари</span>
+		</div>
+		<div
+			class="ml-auto rounded size-32 bg-transparent border border-solid border-black flex-center lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300"
+		>
+			<span
+				class="block relative size-16 before:absolute before:h-[1px] before:w-16 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-16 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45"
+			></span>
+		</div>
+	</div>
+	<div
+		class="sm:grid grid-cols-[3fr,1fr,1fr] pb-12 border-b border-black border-solid gap-20 hidden"
+	>
+		<div class="font-medium uppercase">товар</div>
+		<div class="font-medium uppercase">Кількість</div>
+		<div class="font-medium uppercase">ціна</div>
+	</div>
+	<div class="py-20 border-b border-black border-solid flex">
+		<div
+			class="grid grid-cols-[1rem,1fr] sm:grid-cols-[1fr,1.5fr,1fr,1fr] w-full gap-8 sm:gap-x-24"
+		>
+			<a
+				href="product.html"
+				class="image w-full h-100 sm:pt-[99%] overflow-hidden rounded-20 row-start-1 row-end-3"
+			>
+				<img class="object-cover" src="@img/about_1.png" alt="product" />
+			</a>
+			<div
+				class="col-start-2 col-end-3 sm:col-end-5 lg:col-start-2 lg:col-end-3"
+			>
+				<a href="product.html" class="font-semibold mb-8"
+					>Антицелюлітний крем для тіла</a
+				>
+				<div class="text-s">Артикул: 00000000</div>
+			</div>
+			<div class="col-start-2 sm:col-end-3 lg:col-start-3 lg:col-end-4">
+				<div
+					class="quantity-selector border border-solid border-black rounded-30 gap-24 py-8 px-16 max-w-max"
+				>
+					<button class="qty-btn mr-24" data-action="decrease">-</button>
+					<input
+						type="number"
+						min="1"
+						value="1"
+						class="qty-input w-36 text-center"
+					/>
+					<button class="qty-btn ml-24" data-action="increase">+</button>
+				</div>
+			</div>
+			<div
+				class="flex lg:block gap-8 items-center col-start-2 col-end-3 lg:col-start-4 lg:col-end-5"
+			>
+				<s class="text-gray lg:mb-4">550 грн</s>
+				<div class="h4 font-semi">450 грн</div>
+			</div>
+		</div>
+		<button class="size-24 ml-8">
+			<svg
+				class="size-full duration-300 fill-black lg:hover:fill-orange transition-colors ease-linear"
+			>
+				<use xlink:href="#del-icon"></use>
+			</svg>
+		</button>
+	</div>
+	<div class="sm:flex gap-40 mt-24 sm:ml-auto w-max">
+		<div class="h4 text-gray">Знижка: <span>200 грн</span></div>
+		<div class="h4">Сума замовлення: <span>200 грн</span></div>
+	</div>
+	<div class="flex justify-between items-center mb-14">
+		<button class="flex items-center gap-14 lg:hover:text-light-orange">
+			<div
+				class="rounded bg-transparent size-[.48rem] border border-solid border-black flex-center lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300 ease-linear"
+			>
+				<svg
+					class="size-24 fill-black rotate-[225deg] transition-colors duration-300 ease-linear"
+				>
+					<use href="#arrow-icon"></use>
+				</svg>
+			</div>
+			<span class="font-semibold hidden sm:inline-block">Назад до покупок</span>
+		</button>
+		<button class="btn-black">Оформити замовлення</button>
+	</div>
+</div> -->
+
 <div data-fullscreen class="modal hide">
+	<div class="modal__body md:p-x-24 relative w-full">
+		<div
+			class="modal__content max-w-[10.45rem] mx-auto relative px-24 pt-[.56rem] pb-[.4rem] md:px-[.8rem] md:pt-24 md:pb-[.72rem]"
+		>
+			<div class="wrapper"></div>
 
-    <div class="modal__body md:p-x-24   relative  w-full">
-        <div class="modal__content max-w-[10.45rem] mx-auto relative px-24 pt-[.56rem] pb-[.4rem] md:px-[.8rem] md:pt-24 md:pb-[.72rem]">
-
-            <div class="wrapper">
-
-            </div>
-
-            <button type="button"
-                    class="w-32 h-32 group top-24 right-24 flex items-center justify-center modal__close absolute rounded">
-                <svg class="w-24 h-24 stroke-2 stroke-white group-hover:stroke-black">
-                    <use xlink:href="#close"></use>
-                </svg>
-            </button>
-        </div>
-
-    </div>
-
+			<button
+				type="button"
+				class="w-32 h-32 group top-24 right-24 flex items-center justify-center modal__close absolute rounded"
+			>
+				<svg class="w-24 h-24 stroke-2 stroke-white group-hover:stroke-black">
+					<use xlink:href="#close"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
 </div>

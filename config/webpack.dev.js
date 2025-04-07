@@ -44,6 +44,8 @@ const config = {
 	entry: {
 		app: `${paths.src}/js/app.js`,
 		home: `${paths.src}/js/pages/home.js`,
+		product: `${paths.src}/js/pages/product.js`,
+		catalog: `${paths.src}/js/pages/catalog.js`,
 	},
 
 	output: {

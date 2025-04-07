@@ -13,6 +13,9 @@
 	.btn-black-orange {
 		@apply font-semibold py-16 px-40 rounded-30 text-white bg-black  lg:hover:bg-orange lg:hover:text-black duration-300 transition-colors ease-linear flex-center active:bg-orange active:text-black;
 	}
+	.btn-outline {
+		@apply px-12 py-8 border border-solid border-black rounded-20 lg:hover:bg-orange lg:hover:border-orange transition-colors ease-linear;
+	}
 	.slider-btn {
 		@apply size-40 p-12 sm:p-20 sm:size-[.62rem] border-black border-solid border rounded lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300 ease-linear relative inline-block  active:bg-light-orange active:border-light-orange;
 	}

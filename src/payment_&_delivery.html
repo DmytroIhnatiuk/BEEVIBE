@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ua">
+	@@include('html/_head.html',{ "title":"payment_&_delivery" })
+	<body class="body text-dark-blue">
+		<div class="page-container">
+			@@include('html/_header.html',{})
+			<main>
+				<section
+					class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
+				>
+					<div class="container">
+						<div class="flex mb-32 lg:mb-[0.64rem]">
+							<a
+								href="index.html "
+								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+								>Головна</a
+							>
+							<span class="px-4">/</span>
+							<a
+								href="#"
+								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+								>Опалата і доставка</a
+							>
+						</div>
+						<h1 class="h2 lg:w-5/6 mb-24 lg:mb-32">Опалата і доставка</h1>
+						<div class="lg:grid lg:grid-cols-[3fr,1fr]">
+							<div>
+								<p class="font-semibold mb-16">
+									Ми приймаємо та обробляємо замовлення щодня з 09:00 до 21:00
+									(без вихідних). Зазвичай збір, упаковка та відправка замовлень
+									займає від 1 до 3 днів (в святкові періоди). Ми якісно
+									упаковуємо кожне наше замовлення, щоб всі засоби доїхали
+									цілими і неушкодженими навіть за кордон. У вихідні доставка не
+									здійснюється (на відділення та поштомати).
+								</p>
+								<div
+									class="border border-solid border-black rounded-20 p-24 mb-16"
+								>
+									<div class="font-semibold mb-4">Доставка</div>
+									<p>
+										Доставка по Україні здійснюється Новою поштою. Вартість
+										доставки розраховується поштовою службою.
+									</p>
+								</div>
+								<div class="border border-solid border-black rounded-20 p-24">
+									<div class="font-semibold mb-4">Оплата</div>
+									<p>
+                    <span class="font-semibold">Оплата здійснюється на сайті 2 ма способами.</span>
+                    <ul>
+                      <li>• Оплата за допомогою картки, Apple чи Google Pay картками Visa та Mastercard. </li>
+                      <li>• Оплата за реквізитами: </li>
+                      <li>Отримувач: ФОП Приклад</li>
+                      <li>Назва банку: АТ КБ “ПРИВАТБАНК” </li>
+                      <li>Рахунок отримувача у форматі IBAN: UA000000000000000000000000000 </li>
+                      <li>Призначення платежу: Оплата за товар за номером замовлення…</li>
+                    </ul>
+                  </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			@@include('html/_footer.html',{})
+		</div>
+		@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
+		<script src="js/app.min.js"></script>
+		<script src="js/home.min.js"></script>
+	</body>
+</html>

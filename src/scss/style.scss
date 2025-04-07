@@ -5,3 +5,10 @@
 @import 'base';
 @import 'components';
 @import 'pages';
+
+.volume-btn {
+	&.active {
+		border-color: var(--orange);
+		background: var(--orange);
+	}
+}

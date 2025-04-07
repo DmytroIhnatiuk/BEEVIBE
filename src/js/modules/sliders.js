@@ -169,6 +169,35 @@ function resultsSwiper() {
 	})
 }
 
+function productSliderMain() {
+	const mainSliderEl = document.querySelector('[data-swiper="productSlider"]')
+	const navSliderEl = document.querySelector('[data-swiper="productSliderNav"]')
+
+	if (!mainSliderEl || !navSliderEl) return
+
+	const sliderNav = new Swiper(navSliderEl, {
+		slidesPerView: 4,
+		spaceBetween: 6,
+		direction: 'horizontal',
+		watchSlidesProgress: true,
+		breakpoints: {
+			640: {
+				direction: 'vertical',
+				spaceBetween: 16,
+			},
+		},
+	})
+
+	new Swiper(mainSliderEl, {
+		modules: [Thumbs],
+		slidesPerView: 1,
+		spaceBetween: 20,
+		thumbs: {
+			swiper: sliderNav,
+		},
+	})
+}
+
 export {
 	mainFrameSlider,
 	topSalesSlider,
@@ -176,4 +205,5 @@ export {
 	reviewsSlider,
 	reviewsVideoSlider,
 	resultsSwiper,
+	productSliderMain,
 }
