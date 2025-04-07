@@ -6,8 +6,9 @@ import {
 	reviewsVideoSlider,
 	resultsSwiper,
 } from '../modules/sliders.js'
-import Form from '../modules/Form.js'
 import accordion from '../modules/accordion.js'
+import Form from '../modules/Form.js'
+
 import initTabs from '../modules/tabs.js'
 
 window.addEventListener('DOMContentLoaded', () => {

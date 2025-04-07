@@ -24,7 +24,7 @@
 						</div>
 						<h1 class="h2 font-semibold mb-16 sm:mb-36">Каталог</h1>
 						<div
-							class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-10 sm:gap-20 relative"
+							class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-y-20 gap-x-10 sm:gap-20 relative"
 						>
 							<div
 								class="filter-btn uppercase font-semibold items-center max-w-[2.9rem] px-12 py-8 border border-solid border-black rounded-30 flex justify-between lg:p-0 lg:border-transparent z-30 bg-bg transition-colors duration-300 relative"
@@ -275,14 +275,14 @@
 							</div>
 							<div class="col-start-1 col-end-3 lg:col-start-2 lg:col-end-3">
 								<div
-									class="grid grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 mb-24 sm:mb-36"
+									class="grid grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 lg:gap-20 mb-24 sm:mb-36"
 								>
 									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
 									>
 										<a
 											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
 										>
 											<img src="@img/top-sales.png" alt="top-sales" />
 										</a>
@@ -291,8 +291,10 @@
 										</h3>
 										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
 										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<s class="text-gray text-s">550 грн</s>
+											</div>
 											<div class="flex flex-shrink-0 gap-8">
 												<a
 													href="product.html"
@@ -317,33 +319,33 @@
 										</div>
 										<div class="flex absolute -top-6">
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
 											>
 												Bestseller
 											</div>
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
 											>
 												sale
 											</div>
 										</div>
 									</div>
 									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
 									>
 										<a
 											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
 										>
 											<img src="@img/top-sales.png" alt="top-sales" />
 										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
+										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
 										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
 										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<!-- <s class="text-gray text-s">550 грн</s> -->
+											</div>
 											<div class="flex flex-shrink-0 gap-8">
 												<a
 													href="product.html"
@@ -368,33 +370,81 @@
 										</div>
 										<div class="flex absolute -top-6">
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+											>
+												Bestseller
+											</div>
+										</div>
+									</div>
+									<div
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+									>
+										<a
+											href="product.html"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+										>
+											<img src="@img/top-sales.png" alt="top-sales" />
+										</a>
+										<h3 class="h4 font-semibold mb-4 sm:mb-8">
+											Крем-маска для нормальної шкіри
+										</h3>
+										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+										<div class="flex justify-between items-center">
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<s class="text-gray text-s">550 грн</s>
+											</div>
+											<div class="flex flex-shrink-0 gap-8">
+												<a
+													href="product.html"
+													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+												>
+													<svg
+														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+													>
+														<use href="#arrow-icon"></use>
+													</svg>
+												</a>
+												<button
+													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+												>
+													<svg
+														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+													>
+														<use href="#basket-icon"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="flex absolute -top-6">
+											<div
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
 											>
 												Bestseller
 											</div>
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
 											>
 												sale
 											</div>
 										</div>
 									</div>
 									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
 									>
 										<a
 											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
 										>
 											<img src="@img/top-sales.png" alt="top-sales" />
 										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
+										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
 										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
 										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<!-- <s class="text-gray text-s">550 грн</s> -->
+											</div>
 											<div class="flex flex-shrink-0 gap-8">
 												<a
 													href="product.html"
@@ -419,33 +469,81 @@
 										</div>
 										<div class="flex absolute -top-6">
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+											>
+												Bestseller
+											</div>
+										</div>
+									</div>
+									<div
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+									>
+										<a
+											href="product.html"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+										>
+											<img src="@img/top-sales.png" alt="top-sales" />
+										</a>
+										<h3 class="h4 font-semibold mb-4 sm:mb-8">
+											Крем-маска для нормальної шкіри
+										</h3>
+										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+										<div class="flex justify-between items-center">
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<s class="text-gray text-s">550 грн</s>
+											</div>
+											<div class="flex flex-shrink-0 gap-8">
+												<a
+													href="product.html"
+													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+												>
+													<svg
+														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+													>
+														<use href="#arrow-icon"></use>
+													</svg>
+												</a>
+												<button
+													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+												>
+													<svg
+														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+													>
+														<use href="#basket-icon"></use>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="flex absolute -top-6">
+											<div
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
 											>
 												Bestseller
 											</div>
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
 											>
 												sale
 											</div>
 										</div>
 									</div>
 									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
 									>
 										<a
 											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
 										>
 											<img src="@img/top-sales.png" alt="top-sales" />
 										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
+										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
 										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
 										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
+											<div class="sm:flex sm:gap-16 items-center">
+												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
+												<!-- <s class="text-gray text-s">550 грн</s> -->
+											</div>
 											<div class="flex flex-shrink-0 gap-8">
 												<a
 													href="product.html"
@@ -470,116 +568,9 @@
 										</div>
 										<div class="flex absolute -top-6">
 											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
 											>
 												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
 											</div>
 										</div>
 									</div>
