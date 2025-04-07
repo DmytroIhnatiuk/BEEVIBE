@@ -24,7 +24,6 @@ const accordion = (
 
 		button.addEventListener('click', () => {
 			const isOpen = el.dataset.open === 'true'
-
 			if (!isOpen) {
 				el.dataset.open = 'true'
 				content.style.maxHeight = `${content.scrollHeight}px`
