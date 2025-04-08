@@ -3,10 +3,13 @@
 if (!function_exists('badzingerauto_styles_setup')) :
     function badzingerauto_styles_setup()
     {
-        $release_version = '2.4.0';
-//        wp_enqueue_style('swiper-style', get_theme_file_uri('/assets/css/swiper.min.css'), array(), $release_version);
-//        wp_enqueue_style('tailwind-style', get_theme_file_uri('/assets/css/tailwind.min.css'), array(), $release_version);
+        $release_version = '1.0.0';
+        wp_enqueue_style('tailwind-style', get_theme_file_uri('/assets/css/tailwind.min.css'), array(), $release_version);
+
+        wp_enqueue_style('aos-style', get_theme_file_uri('/assets/css/aos.min.css'), array(), $release_version);
+        wp_enqueue_style('swiper-style', get_theme_file_uri('/assets/css/swiper.min.css'), array(), $release_version);
         wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.min.css'), array(), $release_version);
+
     }
 
 endif;

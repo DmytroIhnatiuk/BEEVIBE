@@ -1,25 +1,25 @@
 <?php
-if (!function_exists('usmishka_scripts_setup')) :
-    function usmishka_scripts_setup()
+if (!function_exists('beevibe_scripts_setup')) :
+    function beevibe_scripts_setup()
     {
-        $release_version = '3.4.0';
+        $release_version = '1.0.0';
         wp_enqueue_script('main-scripts', get_theme_file_uri('/assets/js/app.min.js'), array(), $release_version);
         if (is_front_page()) {
             wp_enqueue_script('home-scripts', get_theme_file_uri('/assets/js/home.min.js'), array(), $release_version);
         }
-        if (is_archive('cars')) {
-            wp_enqueue_script('catalog-scripts', get_theme_file_uri('/assets/js/catalog.min.js'), array(), $release_version);
-        }
-        if (is_singular('cars')) {
-            wp_enqueue_script('car-scripts', get_theme_file_uri('/assets/js/car.min.js'), array(), $release_version);
-        }
-        if (is_singular('services')) {
-            wp_enqueue_script('services-scripts', get_theme_file_uri('/assets/js/service.min.js'), array(), $release_version);
-        }
+//        if (is_archive('cars')) {
+//            wp_enqueue_script('catalog-scripts', get_theme_file_uri('/assets/js/catalog.min.js'), array(), $release_version);
+//        }
+//        if (is_singular('cars')) {
+//            wp_enqueue_script('car-scripts', get_theme_file_uri('/assets/js/car.min.js'), array(), $release_version);
+//        }
+//        if (is_singular('services')) {
+//            wp_enqueue_script('services-scripts', get_theme_file_uri('/assets/js/service.min.js'), array(), $release_version);
+//        }
     }
 
 endif;
-add_action('wp_footer', 'usmishka_scripts_setup');
+add_action('wp_footer', 'beevibe_scripts_setup');
 function php_script()
 {
     ?>

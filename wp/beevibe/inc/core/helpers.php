@@ -41,6 +41,13 @@ function get_idx_with_zero($index)
 {
     return $index > 10 ? $index : '0' . $index;
 }
+
+function dn_get_image_src($id, $size = 'full')
+{
+    $src = wp_get_attachment_image_src($id, $size);
+    return $src ? $src[0] : '';
+}
+
 function dn_get_image_attachment($id, $thumb = 'medium', $alt = '', $className = '')
 {
     return wp_get_attachment_image($id, $thumb, false, ['alt' => $alt, 'class' => $className]);

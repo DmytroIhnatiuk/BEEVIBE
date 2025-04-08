@@ -15,7 +15,14 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-
+    <link
+            href="https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Comfortaa:500,600,700&display=swap"
+            rel="stylesheet"
+    />
     <?php wp_head(); ?>
 </head>
 
@@ -30,7 +37,7 @@
                     class="flex items-center bg-white rounded-30 py-10 px-16 sm:px-32 box-shadow"
             >
                 <a
-                        href="index.html"
+                        href="<?= home_url(); ?>"
                         class="block w-[1.16rem] lg:w-[1.36rem] relative z-[100] h-36 sm:h-[.46rem]"
                 >
                     <svg
