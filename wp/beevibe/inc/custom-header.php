@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package beevibe
+ * @package drewush
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses beevibe_header_style()
+ * @uses drewush_header_style()
  */
-function beevibe_custom_header_setup() {
+function drewush_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'beevibe_custom_header_args',
+			'drewush_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'beevibe_header_style',
+				'wp-head-callback'   => 'drewush_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'beevibe_custom_header_setup' );
+add_action( 'after_setup_theme', 'drewush_custom_header_setup' );
 
-if ( ! function_exists( 'beevibe_header_style' ) ) :
+if ( ! function_exists( 'drewush_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see beevibe_custom_header_setup().
+	 * @see drewush_custom_header_setup().
 	 */
-	function beevibe_header_style() {
+	function drewush_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package beevibe
+ * @package drewush
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function beevibe_jetpack_setup() {
+function drewush_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'beevibe_infinite_scroll_render',
+			'render'    => 'drewush_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function beevibe_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'beevibe-style',
+				'stylesheet' => 'drewush-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function beevibe_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'beevibe_jetpack_setup' );
+add_action( 'after_setup_theme', 'drewush_jetpack_setup' );
 
-if ( ! function_exists( 'beevibe_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'drewush_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function beevibe_infinite_scroll_render() {
+	function drewush_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :
