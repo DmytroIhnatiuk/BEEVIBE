@@ -15,8 +15,10 @@
  * @version     3.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<div
+        class="grid grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 lg:gap-20 mb-24 sm:mb-36"
+>

@@ -19,6 +19,9 @@
 	.slider-btn {
 		@apply size-40 p-12 sm:p-20 sm:size-[.62rem] border-black border-solid border rounded lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300 ease-linear relative inline-block  active:bg-light-orange active:border-light-orange;
 	}
+	.disabled{
+		@apply opacity-50 pointer-events-none;
+	}
 }
 @layer utilities {
 	.orange-gradient {
@@ -26,7 +29,7 @@
 	}
 
 	.box-shadow {
-		box-shadow: 0px 10px 10px 0px rgba(49, 45, 43, 0.15);
+		box-shadow: 0 10px 10px 0 rgba(49, 45, 43, 0.15);
 	}
 	.text-clamp_2 {
 		display: -webkit-box;
