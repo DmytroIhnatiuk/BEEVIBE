@@ -177,7 +177,7 @@ body {
 	min-height: -webkit-fill-available;
 	&::before {
 		content: '';
-		position: absolute;
+		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -197,7 +197,6 @@ body {
 	&.overlay {
 		&::before {
 			opacity: 1;
-			z-index: 10;
 		}
 	}
 
@@ -270,10 +269,22 @@ body {
 		}
 	}
 }
+input:checked + span {
+	svg {
+		stroke: var(--black);
+	}
+}
+.round-check {
+	input:checked + span {
+		&::before {
+			background: var(--light-orange);
+		}
+	}
+}
 
 .projects-filter {
 	&.active {
-		transform: translateX(3.5rem);
+		transform: translateX(3.75rem);
 	}
 }
 .filter-btn {

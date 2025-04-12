@@ -24,10 +24,10 @@
 						</div>
 						<h1 class="h2 font-semibold mb-16 sm:mb-36">Каталог</h1>
 						<div
-							class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-y-20 gap-x-10 sm:gap-20 relative"
+							class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-y-20 gap-x-10 sm:gap-20"
 						>
 							<div
-								class="filter-btn uppercase font-semibold items-center max-w-[2.9rem] px-12 py-8 border border-solid border-black rounded-30 flex justify-between lg:p-0 lg:border-transparent z-30 bg-bg transition-colors duration-300 relative"
+								class="filter-btn uppercase font-semibold items-center max-w-[2.9rem] px-12 py-8 border border-solid border-black rounded-30 flex justify-between lg:p-0 lg:border-transparent bg-bg transition-colors duration-300 relative"
 							>
 								<span> Фільтри </span
 								><svg
@@ -115,10 +115,20 @@
 							</div>
 
 							<div
-								class="projects-filter w-[2.9rem] lg:w-full overflow-x-scroll px-16 pt-40 pb-24 lg:py-24 bg-black lg:bg-transparent absolute lg:static top-32 lg:top-auto rounded-[.15rem] -left-[3.5rem] z-20 transition-transform duration-300 border border-solid border-black text-white lg:text-black h-max"
+								class="projects-filter w-[3.59rem] lg:w-full overflow-x-scroll px-24 lg:px-16 py-24 bg-black lg:bg-transparent fixed lg:static top-14 bottom-14 h-[calc(100vh-.32rem)] lg:top-auto rounded-r-[.15rem] lg:rounded-[.15rem] -left-[3.75rem] transition-transform duration-300 border border-solid border-black text-white lg:text-black lg:h-max z-50"
 							>
-								<form action="#">
-									<div class="range mb-32">
+								<div
+									class="ml-auto rounded size-32 bg-transparent border border-solid border-white flex-center filter-close lg:hidden mb-14"
+								>
+									<span
+										class="block relative size-16 before:absolute before:h-[1px] before:w-16 before:bg-white before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-16 after:bg-white after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45"
+									></span>
+								</div>
+								<form
+									action="#"
+									class="flex h-[calc(100%-.48rem)] lg:h-auto flex-col"
+								>
+									<div class="range">
 										<div class="h4 mb-10 font-semibold">Ціна</div>
 										<div class="range__control mb-20">
 											<input
@@ -152,120 +162,238 @@
 											</div>
 										</div>
 									</div>
-									<div class="accordion-filter accordion--open mb-24 last:mb-0">
+									<div class="overflow-y-scroll h-full mt-32 mb-24">
 										<div
-											class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
+											class="accordion-filter accordion--open mb-24 last:mb-0"
 										>
-											<span>Категорії </span>
-
-											<svg
-												class="size-24 fill-none stroke-white lg:stroke-black"
+											<div
+												class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
 											>
-												<use xlink:href="#cheven-icon"></use>
-											</svg>
+												<span>Категорії </span>
+
+												<svg
+													class="size-24 fill-none stroke-white lg:stroke-black"
+												>
+													<use xlink:href="#cheven-icon"></use>
+												</svg>
+											</div>
+											<div
+												class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
+											>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Обличчя <span class="ml-16">16</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Тіло <span class="ml-16">20</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Сонцезахист <span class="ml-16">14</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Набори косметики <span class="ml-16">8</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Для чоловіків <span class="ml-16">8</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Аксесуари <span class="ml-16">5</span>
+													</label>
+												</div>
+											</div>
 										</div>
 										<div
-											class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
+											class="accordion-filter accordion--open mb-24 last:mb-0"
 										>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+											<div
+												class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
+											>
+												<span>Категорії </span>
+
+												<svg
+													class="size-24 fill-none stroke-white lg:stroke-black"
 												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Обличчя <span class="ml-16">16</span>
-												</label>
+													<use xlink:href="#cheven-icon"></use>
+												</svg>
 											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Тіло <span class="ml-16">20</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Сонцезахист <span class="ml-16">14</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Набори косметики <span class="ml-16">8</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Для чоловіків <span class="ml-16">8</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Аксесуари <span class="ml-16">5</span>
-												</label>
+											<div
+												class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
+											>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Обличчя <span class="ml-16">16</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Тіло <span class="ml-16">20</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Сонцезахист <span class="ml-16">14</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Набори косметики <span class="ml-16">8</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Для чоловіків <span class="ml-16">8</span>
+													</label>
+												</div>
+												<div class="pt-8">
+													<label
+														class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
+													>
+														<input type="checkbox" class="hidden" />
+														<span
+															class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
+															><svg
+																class="size-24 fill-none transition-colors duration-300 ease-linear"
+															>
+																<use href="#check-icon"></use>
+															</svg>
+														</span>
+														Аксесуари <span class="ml-16">5</span>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
-
 									<button
 										class="bg-orange rounded-30 text-black lg:bg-transparent lg:btn-outline uppercase w-full py-12"
 									>

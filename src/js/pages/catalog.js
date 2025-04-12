@@ -6,14 +6,34 @@ import Form from '../modules/Form.js'
 
 window.addEventListener('DOMContentLoaded', () => {
 	const filterBtn = document.querySelector('.filter-btn')
+	const filterCloseBtn = document.querySelector('.filter-close')
 	const filterBlocks = document.querySelectorAll(
 		'.filter-btn, .projects-filter'
 	)
+	const body = document.body
 
 	if (window.innerWidth < 1024) {
-		filterBtn.addEventListener('click', function () {
-			filterBlocks.forEach(block => block.classList.toggle('active'))
-		})
+		if (filterBtn) {
+			filterBtn.addEventListener('click', function () {
+				filterBlocks.forEach(block => block.classList.toggle('active'))
+
+				// Додаємо або знімаємо 'active' на <body>
+				if (
+					[...filterBlocks].some(block => block.classList.contains('active'))
+				) {
+					body.classList.add('active')
+				} else {
+					body.classList.remove('active')
+				}
+			})
+		}
+
+		if (filterCloseBtn) {
+			filterCloseBtn.addEventListener('click', function () {
+				filterBlocks.forEach(block => block.classList.remove('active'))
+				body.classList.remove('active') // Повертаємо скрол
+			})
+		}
 	}
 
 	const fromSlider = document.querySelector('[data-range="min"]')
