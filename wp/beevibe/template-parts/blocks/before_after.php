@@ -45,16 +45,16 @@ if (have_rows('before_after', $page_id)):?>
 
                 </div>
                 <div
-                        class="flex justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                        class=" swiper-navigation flex justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                 >
-                    <button class="slider-btn prev">
+                    <button class="slider-btn  swiper-button prev">
                         <svg
                                 class="size-full d fill-transparent stroke-black rotate-90"
                         >
                             <use xlink:href="#cheven-icon"></use>
                         </svg>
                     </button>
-                    <button class="slider-btn next">
+                    <button class="slider-btn  swiper-button next">
                         <svg
                                 class="size-full d fill-transparent stroke-black -rotate-90"
                         >

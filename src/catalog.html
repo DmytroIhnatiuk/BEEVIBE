@@ -1,897 +1,1081 @@
 <!doctype html>
 <html lang="ua">
-	@@include('html/_head.html',{ "title":"product" })
-	<body class="body text-black">
-		<div class="page-container">
-			@@include('html/_header.html',{})
-			<main>
-				<section
-					class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
-				>
-					<div class="container">
-						<div class="flex mb-32 lg:mb-[0.64rem]">
-							<a
-								href="index.html "
-								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
-								>Головна</a
-							>
-							<span class="px-4">/</span>
-							<a
-								href="index.html "
-								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
-								>Каталог</a
-							>
-						</div>
-						<h1 class="h2 font-semibold mb-16 sm:mb-36">Каталог</h1>
-						<div
-							class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-y-20 gap-x-10 sm:gap-20 relative"
-						>
-							<div
-								class="filter-btn uppercase font-semibold items-center max-w-[2.9rem] px-12 py-8 border border-solid border-black rounded-30 flex justify-between lg:p-0 lg:border-transparent z-30 bg-bg transition-colors duration-300 relative"
-							>
+@@include('html/_head.html',{ "title":"product" })
+<body class="body text-black">
+<div class="page-container rounded-8">
+     <span data-cart-count class="absolute rounded size-16 flex items-center z-[2] -bottom-[.02rem] -right-[.02rem] justify-center bg-orange text-[.12rem]  font-medium">
+					10
+				</span>
+    <div class="w-max"></div>
+    @@include('html/_header.html',{})
+    <main>
+        <section
+                class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
+        >
+            <div class="container">
+                <div class="flex mb-32 lg:mb-[0.64rem]">
+                    <a
+                            href="index.html "
+                            class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+                    >Головна</a
+                    >
+                    <span class="px-4">/</span>
+                    <a
+                            href="index.html "
+                            class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+                    >Каталог</a
+                    >
+                </div>
+                <h1 class="h2 font-semibold mb-16 sm:mb-36">Каталог</h1>
+                <div
+                        class="grid grid-cols-[1fr,0.42rem] sm:grid-cols-2 lg:grid-cols-[1fr,3fr] gap-y-20 gap-x-10 sm:gap-20 relative"
+                >
+                    <div
+                            class="filter-btn uppercase font-semibold items-center max-w-[2.9rem] px-12 py-8 border border-solid border-black rounded-30 flex justify-between lg:p-0 lg:border-transparent z-30 bg-bg transition-colors duration-300 relative"
+                    >
 								<span> Фільтри </span
-								><svg
-									class="block size-24 fill-none stroke-black lg:hidden transition-transform duration-300 -rotate-90"
-								>
-									<use xlink:href="#cheven-icon"></use>
-								</svg>
-							</div>
-							<div class="flex justify-end lg:justify-between items-center">
-								<div class="lg:gap-4 hidden lg:flex items-center gap-8">
-									<div class="text-gray">28 товарів</div>
-									<div
-										class="rounded-30 bg-light-orange p-8 flex gap-4 cursor-pointer items-center"
-									>
-										<span>Тіло</span>
-										<span
-											class="block relative size-16 before:absolute before:h-[1px] before:w-14 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-14 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45 hover:scale-[1.15] transition-transform duration-300"
-										></span>
-									</div>
-									<div
-										class="rounded-30 bg-light-orange p-8 flex gap-4 cursor-pointer items-center"
-									>
-										<span>Крем</span>
-										<span
-											class="block relative size-16 before:absolute before:h-[1px] before:w-14 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-14 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45 hover:scale-[1.15] transition-transform duration-300"
-										></span>
-									</div>
-								</div>
+                                >
+                        <svg
+                                class="block size-24 fill-none stroke-black lg:hidden transition-transform duration-300 -rotate-90"
+                        >
+                            <use xlink:href="#cheven-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="flex justify-end lg:justify-between items-center">
+                        <div class="lg:gap-4 hidden lg:flex items-center gap-8">
+                            <div class="text-gray">28 товарів</div>
+                            <div
+                                    class="rounded-30 bg-light-orange p-8 flex gap-4 cursor-pointer items-center"
+                            >
+                                <span>Тіло</span>
+                                <span
+                                        class="block relative size-16 before:absolute before:h-[1px] before:w-14 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-14 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45 hover:scale-[1.15] transition-transform duration-300"
+                                ></span>
+                            </div>
+                            <div
+                                    class="rounded-30 bg-light-orange p-8 flex gap-4 cursor-pointer items-center"
+                            >
+                                <span>Крем</span>
+                                <span
+                                        class="block relative size-16 before:absolute before:h-[1px] before:w-14 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-14 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45 hover:scale-[1.15] transition-transform duration-300"
+                                ></span>
+                            </div>
+                        </div>
 
-								<div class="dropdown relative ml-auto z-20">
-									<div
-										class="dropdown__btn sm:min-w-[2.9rem] flex gap-8 border border-solid border-black px-8 sm:px-12 py-8 rounded-30 cursor-pointer justify-between bg-bg relative z-10"
-									>
+                        <div class="dropdown relative ml-auto z-20">
+                            <div
+                                    class="dropdown__btn sm:min-w-[2.9rem] flex gap-8 border border-solid border-black px-8 sm:px-12 py-8 rounded-30 cursor-pointer justify-between bg-bg relative z-10"
+                            >
 										<span
-											class="dropdown__active hidden sm:block"
-											data-active=""
-											data-selected=""
-											><span></span>
+                                                class="dropdown__active hidden sm:block"
+                                                data-active=""
+                                                data-selected=""
+                                        ><span></span>
 										</span>
-										<span
-											class="dropdown__icon transition-transform duration-300 hidden sm:block"
-										>
+                                <span
+                                        class="dropdown__icon transition-transform duration-300 hidden sm:block"
+                                >
 											<svg class="size-24 fill-none stroke-black">
 												<use xlink:href="#cheven-icon"></use>
 											</svg>
 										</span>
-										<svg
-											class="size-24 stroke-black fill-transparent sm:hidden"
-										>
-											<use xlink:href="#sorting-icon"></use>
-										</svg>
-									</div>
-									<div
-										class="dropdown__content pt-32 pb-16 opacity-0 rounded-20 bg-black box-shadow absolute right-0 w-max sm:w-full top-1/2 text-white transition-opacity duration-300 ease-linear"
-									>
-										<ul class="dropdown__list">
-											<li
-												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-											>
-												Сoртувати за замовчуванням
-											</li>
-											<li
-												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-											>
-												Сортувати від нових
-											</li>
-											<li
-												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-											>
-												Сортувати від старих
-											</li>
-											<li
-												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-											>
-												Сортувати від більшої ціни
-											</li>
-											<li
-												class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-											>
-												Сортувати від нижчої ціни
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
+                                <svg
+                                        class="size-24 stroke-black fill-transparent sm:hidden"
+                                >
+                                    <use xlink:href="#sorting-icon"></use>
+                                </svg>
+                            </div>
+                            <div
+                                    class="dropdown__content pt-32 pb-16 opacity-0 rounded-20 bg-black box-shadow absolute right-0 w-max sm:w-full top-1/2 text-white transition-opacity duration-300 ease-linear"
+                            >
+                                <ul class="dropdown__list">
+                                    <li
+                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
+                                    >
+                                        Сoртувати за замовчуванням
+                                    </li>
+                                    <li
+                                            class="btn-outline-white btn-outline-white py-12 flex lg:hidden mt-16 dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
+                                    >
+                                        Сортувати від нових
+                                    </li>
+                                    <li
+                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
+                                    >
+                                        Сортувати від старих
+                                    </li>
+                                    <li
+                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
+                                    >
+                                        Сортувати від більшої ціни
+                                    </li>
+                                    <li
+                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
+                                    >
+                                        Сортувати від нижчої ціни
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-							<div
-								class="projects-filter w-[2.9rem] lg:w-full overflow-x-scroll px-16 pt-40 pb-24 lg:py-24 bg-black lg:bg-transparent absolute lg:static top-32 lg:top-auto rounded-[.15rem] -left-[3.5rem] z-20 transition-transform duration-300 border border-solid border-black text-white lg:text-black h-max"
-							>
-								<form action="#">
-									<div class="range mb-32">
-										<div class="h4 mb-10 font-semibold">Ціна</div>
-										<div class="range__control mb-20">
-											<input
-												id="fromSlider"
-												data-range="min"
-												step="100"
-												type="range"
-												value="0"
-												min="0"
-												max="60000"
-												class="!text-white lg:!text-black"
-											/>
-											<input
-												id="toSlider"
-												data-range="max"
-												step="100"
-												type="range"
-												value="60000"
-												min="0"
-												max="60000"
-											/>
-										</div>
-										<div
-											class="grid range__value grid-cols-2 gap-x-16 mb-20 range__number"
-										>
-											<div class="!text-white lg:!text-black" data-price="min">
-												3000 грн
-											</div>
-											<div class="!text-white lg:!text-black" data-price="max">
-												99 999 грн
-											</div>
-										</div>
-									</div>
-									<div class="accordion-filter accordion--open mb-24 last:mb-0">
-										<div
-											class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
-										>
-											<span>Категорії </span>
+                    <div
+                            class="projects-filter w-[2.9rem] lg:w-full overflow-x-scroll px-16 pt-40 pb-24 lg:py-24 bg-black lg:bg-transparent absolute lg:static top-32 lg:top-auto rounded-[.15rem] -left-[3.5rem] z-20 transition-transform duration-300 border border-solid border-black text-white lg:text-black h-max"
+                    >
+                        <form action="#">
+                            <div class="range mb-32">
+                                <div class="h4 mb-10 font-semibold">Ціна</div>
+                                <div class="range__control mb-20">
+                                    <input
+                                            id="fromSlider"
+                                            data-range="min"
+                                            step="100"
+                                            type="range"
+                                            value="0"
+                                            min="0"
+                                            max="60000"
+                                            class="!text-white lg:!text-black"
+                                    />
+                                    <input
+                                            id="toSlider"
+                                            data-range="max"
+                                            step="100"
+                                            type="range"
+                                            value="60000"
+                                            min="0"
+                                            max="60000"
+                                    />
+                                </div>
+                                <div
+                                        class="grid range__value grid-cols-2 gap-x-16 mb-20 range__number"
+                                >
+                                    <div class="!text-white lg:!text-black" data-price="min">
+                                        3000 грн
+                                    </div>
+                                    <div class="!text-white lg:!text-black" data-price="max">
+                                        99 999 грн
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-filter accordion--open mb-24 last:mb-0">
+                                <div
+                                        class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
+                                >
+                                    <span>Категорії </span>
 
-											<svg
-												class="size-24 fill-none stroke-white lg:stroke-black"
-											>
-												<use xlink:href="#cheven-icon"></use>
-											</svg>
-										</div>
-										<div
-											class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
-										>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Обличчя <span class="ml-16">16</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Тіло <span class="ml-16">20</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Сонцезахист <span class="ml-16">14</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Набори косметики <span class="ml-16">8</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Для чоловіків <span class="ml-16">8</span>
-												</label>
-											</div>
-											<div class="pt-8">
-												<label
-													class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-												>
-													<input type="checkbox" class="hidden" />
-													<span
-														class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-														><svg
-															class="size-24 fill-none transition-colors duration-300 ease-linear"
-														>
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-													Аксесуари <span class="ml-16">5</span>
-												</label>
-											</div>
-										</div>
-									</div>
+                                    <svg
+                                            class="size-24 fill-none stroke-white lg:stroke-black"
+                                    >
+                                        <use xlink:href="#cheven-icon"></use>
+                                    </svg>
+                                </div>
+                                <div class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
+                                     style="max-height: 768px;">
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="20" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="w-max block">Аксесуари <span class="ml-8">0</span></span>
+                                        </label>
 
-									<button
-										class="bg-orange rounded-30 text-black lg:bg-transparent lg:btn-outline uppercase w-full py-12"
-									>
-										фільтрувати
-									</button>
-								</form>
-							</div>
-							<div class="col-start-1 col-end-3 lg:col-start-2 lg:col-end-3">
-								<div
-									class="grid grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 lg:gap-20 mb-24 sm:mb-36"
-								>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<s class="text-gray text-s">550 грн</s>
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<!-- <s class="text-gray text-s">550 грн</s> -->
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<s class="text-gray text-s">550 грн</s>
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<!-- <s class="text-gray text-s">550 грн</s> -->
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<s class="text-gray text-s">550 грн</s>
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-									<div
-										class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
-									>
-										<a
-											href="product.html"
-											class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</a>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:flex sm:gap-16 items-center">
-												<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-												<!-- <s class="text-gray text-s">550 грн</s> -->
-											</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="product.html"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-										</div>
-									</div>
-								</div>
-								<div
-									class="flex gap-16 justify-center mx-center mb-36 sm:mb-0 items-center gap-5"
-								>
-									<button class="slider-btn">
-										<svg
-											class="size-full d fill-transparent stroke-black rotate-90"
-										>
-											<use xlink:href="#cheven-icon"></use>
-										</svg>
-									</button>
-									<span class="text-blue font-medium"> 1, 2,3....6 </span>
-									<button class="slider-btn next">
-										<svg
-											class="size-full d fill-transparent stroke-black -rotate-90"
-										>
-											<use xlink:href="#cheven-icon"></use>
-										</svg>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="mb-[.64rem] lg:mb-[1.1rem]">
-					<div class="lg:px-[var(--container-gap)] pl-[var(--container-gap)]">
-						<div
-							class="lg:flex justify-between mb-16 sm:mb-36 pr-[var(--container-gap)] lg:pr-0"
-						>
-							<h2 class="mb-24 lg:mb-0">
-								<span class="lg:block">500+ реальних відгуків</span>
-							</h2>
+                                    </div>
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="21" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="w-max block">Для чоловіків <span class="ml-8">0</span></span>
+                                        </label>
 
-							<a
-								class="py-8 sm:pl-40 pr-8 text-black rounded-30 bg-orange items-center hover:bg-black hover:text-white transition-colors duration-300 group w-full sm:w-max flex justify-center ml-auto text-s lg:text-m lg:gap-16 gap-4"
-								href="#"
-								><span>Свіжі відгуки кожного дня в наших сторіс</span>
+                                    </div>
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="19" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="">Набори доглядової косметики <span
+                                                    class="ml-8">0</span></span>
+                                        </label>
 
-								<span
-									href="#"
-									class="size-40 p-4 rounded lg:flex items-center justify-center transition-colors duration-300 border border-solid border-black group-hover:border-white"
-								>
+                                    </div>
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="16" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="w-max block">Обличчя <span class="ml-8">2</span></span>
+                                        </label>
+
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="25" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="pr-24 block">Засоби для зняття макіяжу <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="30" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Креми для обличчя <span class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="32" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Креми під очі <span
+                                                        class="ml-8">1</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="26" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Очищення шкіри обличчя <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="33" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Сети для обличчя <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="29" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Сироватки і патчі <span class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="31" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Сонцезахисні засоби (SPF) <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="28" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Тоніки для обличчя <span class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="34" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Тревел версії <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="18" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="w-max block">Сонцезахист <span class="ml-8">0</span></span>
+                                        </label>
+
+                                    </div>
+                                    <div class="pt-8">
+                                        <label class="checkbox flex items-center  gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-8 last:mb-0">
+                                            <input value="17" type="checkbox" class="hidden">
+                                            <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                    <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                        <use href="#check-icon"></use>
+                    </svg>
+                </span>
+                                            <span class="w-max block">Тіло <span class="ml-8">0</span></span>
+                                        </label>
+
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="37" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Антицелюлітний догляд <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="38" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Догляд для рік та ніг <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="36" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Скраби для тіла <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="35" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Сонцезахисні засоби (SPF) <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                        <div class="mb-8 ml-8">
+                                            <label class="checkbox items-center flex gap-12 w-full cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0">
+                                                <input value="39" type="checkbox" class="hidden">
+                                                <span class="size-28 border border-solid border-white lg:border-black rounded-[.06rem] relative flex-center transition-colors duration-300 before:transition-colors before:duration-300">
+                            <svg class="size-24 fill-none transition-colors duration-300 ease-linear">
+                                <use href="#check-icon"></use>
+                            </svg>
+                        </span>
+                                                <span class="w-max block">Тревел версії <span
+                                                        class="ml-8">0</span></span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button
+                                    class="bg-orange rounded-30 text-black lg:bg-transparent lg:btn-outline uppercase w-full py-12"
+                            >
+                                фільтрувати
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-start-1 col-end-3 lg:col-start-2 lg:col-end-3">
+                        <div
+                                class="grid grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 lg:gap-20 mb-24 sm:mb-36"
+                        >
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <s class="text-gray text-s">550 грн</s>
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
+                                    >
+                                        sale
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <!-- <s class="text-gray text-s">550 грн</s> -->
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <s class="text-gray text-s">550 грн</s>
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
+                                    >
+                                        sale
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <!-- <s class="text-gray text-s">550 грн</s> -->
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <s class="text-gray text-s">550 грн</s>
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-red text-white"
+                                    >
+                                        sale
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-20 relative box-shadow"
+                            >
+                                <a
+                                        href="product.html"
+                                        class="image w-full pt-[97%] rounded-20 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </a>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">Крем-маска</h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:flex sm:gap-16 items-center">
+                                        <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                        <!-- <s class="text-gray text-s">550 грн</s> -->
+                                    </div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="product.html"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-[.1rem] sm:text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                                class="flex gap-16 justify-center mx-center mb-36 sm:mb-0 items-center gap-5"
+                        >
+                            <button class="slider-btn">
+                                <svg
+                                        class="size-full d fill-transparent stroke-black rotate-90"
+                                >
+                                    <use xlink:href="#cheven-icon"></use>
+                                </svg>
+                            </button>
+                            <span class="text-blue font-medium"> 1, 2,3....6 </span>
+                            <button class="slider-btn next">
+                                <svg
+                                        class="size-full d fill-transparent stroke-black -rotate-90"
+                                >
+                                    <use xlink:href="#cheven-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[.64rem] lg:mb-[1.1rem]">
+            <div class="lg:px-[var(--container-gap)] pl-[var(--container-gap)]">
+                <div
+                        class="lg:flex justify-between mb-16 sm:mb-36 pr-[var(--container-gap)] lg:pr-0"
+                >
+                    <h2 class="mb-24 lg:mb-0">
+                        <span class="lg:block">500+ реальних відгуків</span>
+                    </h2>
+
+                    <a
+                            class="py-8 sm:pl-40 pr-8 text-black rounded-30 bg-orange items-center hover:bg-black hover:text-white transition-colors duration-300 group w-full sm:w-max flex justify-center ml-auto text-s lg:text-m lg:gap-16 gap-4"
+                            href="#"
+                    ><span>Свіжі відгуки кожного дня в наших сторіс</span>
+
+                        <span
+                                href="#"
+                                class="size-40 p-4 rounded lg:flex items-center justify-center transition-colors duration-300 border border-solid border-black group-hover:border-white"
+                        >
 									<svg
-										class="size-full group-hover:fill-white transition-colors duration-300 ease-linear fill-black"
-									>
+                                            class="size-full group-hover:fill-white transition-colors duration-300 ease-linear fill-black"
+                                    >
 										<use href="#instagram-icon"></use>
 									</svg>
 								</span>
-							</a>
-						</div>
+                    </a>
+                </div>
 
-						<div class="tabs-container">
-							<div class="mb-16">
-								<div
-									class="flex gap-16 overflow-x-scroll tab__buttons leading-snug mb-16"
-								>
-									<div
-										class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
-									>
-										Відгуки
-									</div>
-									<div
-										class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
-									>
-										Відео відгуки
-									</div>
-								</div>
+                <div class="tabs-container">
+                    <div class="mb-16">
+                        <div
+                                class="flex gap-16 overflow-x-scroll tab__buttons leading-snug mb-16"
+                        >
+                            <div
+                                    class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
+                            >
+                                Відгуки
+                            </div>
+                            <div
+                                    class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
+                            >
+                                Відео відгуки
+                            </div>
+                        </div>
 
-								<div class="relative tab__contents">
-									<div
-										class="tab__content opacity-0 bg-bg transition-opacity duration-300 ease-linear"
-									>
-										<div class="swiper mb-40" data-swiper="reviewsSlider">
-											<div class="swiper-wrapper mb-24">
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div
-												class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-											>
-												<div class="slider-btn prev">
-													<svg
-														class="size-full d fill-transparent stroke-black rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-												<div class="slider-btn next">
-													<svg
-														class="size-full d fill-transparent stroke-black -rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div
-										class="tab__content absolute top-0 opacity-0 bg-bg transition-opacity duration-300 ease-linear min-w-0 w-full"
-									>
-										<div class="swiper mb-40" data-swiper="reviewsVideoSlider">
-											<div class="swiper-wrapper mb-24">
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div
-												class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-											>
-												<div class="slider-btn prev">
-													<svg
-														class="size-full d fill-transparent stroke-black rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-												<div class="slider-btn next">
-													<svg
-														class="size-full d fill-transparent stroke-black -rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="mb-[.64rem] lg:mb-[1.1rem]">
-					<div class="container">
-						<div class="grid lg:grid-cols-[2fr,1fr] orange-gradient rounded-30">
-							<div class="sm:px-[.8rem] pt-50 pb-32 px-20 sm:py-100">
-								<h2 class="mb-24">
-									Потрібна допомога в підборі якісного догляду?
-								</h2>
-								<p class="h4 font-semibold lg:pr-100 mb-24">
-									Наші менеджери допоможуть вам і залюбки дадуть відповідь на
-									всі ваші питання
-								</p>
-								<form class="form text-blue max-w-[7.26rem]">
-									<div
-										class="flex flex-wrap justify-between mx-auto gap-x-8 gap-y-24"
-									>
-										<div class="flex form-item flex-col w-full lg:w-[2.35rem]">
-											<label for="name-add" class="text-s font-semibold mb-4">
-												Ім’я</label
-											>
-											<input
-												type="text"
-												name="name"
-												id="name-calc"
-												class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
-											/>
-											<div class="form-item__message"></div>
-										</div>
-										<div class="flex form-item flex-col w-full lg:w-[2.35rem]">
-											<label for="phone-add" class="text-s mb-4">
-												Номер телефона</label
-											>
-											<input
-												type="text"
-												name="phone"
-												id="phone-calc"
-												class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
-											/>
-											<div class="form-item__message"></div>
-										</div>
-										<button
-											type="submit"
-											class="btn-black h-[0.54rem] self-end w-full lg:w-auto"
-										>
-											Відправити
-										</button>
-									</div>
-								</form>
-							</div>
-							<div
-								class="image w-full h-[3.26rem] sm:h-[6rem] lg:h-full rounded-30 overflow-hidden"
-							>
-								<img class="object-cover" src="@img/form.png" alt="form_img" />
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
+                        <div class="relative tab__contents">
+                            <div
+                                    class="tab__content opacity-0 bg-bg transition-opacity duration-300 ease-linear"
+                            >
+                                <div class="swiper mb-40" data-swiper="reviewsSlider">
+                                    <div class="swiper-wrapper mb-24">
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                    >
+                                        <div class="slider-btn prev">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="slider-btn next">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black -rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="tab__content absolute top-0 opacity-0 bg-bg transition-opacity duration-300 ease-linear min-w-0 w-full"
+                            >
+                                <div class="swiper mb-40" data-swiper="reviewsVideoSlider">
+                                    <div class="swiper-wrapper mb-24">
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                    >
+                                        <div class="slider-btn prev">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="slider-btn next">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black -rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[.64rem] lg:mb-[1.1rem]">
+            <div class="container">
+                <div class="grid lg:grid-cols-[2fr,1fr] orange-gradient rounded-30">
+                    <div class="sm:px-[.8rem] pt-50 pb-32 px-20 sm:py-100">
+                        <h2 class="mb-24">
+                            Потрібна допомога в підборі якісного догляду?
+                        </h2>
+                        <p class="h4 font-semibold lg:pr-100 mb-24">
+                            Наші менеджери допоможуть вам і залюбки дадуть відповідь на
+                            всі ваші питання
+                        </p>
+                        <form class="form text-blue max-w-[7.26rem]">
+                            <div
+                                    class="flex flex-wrap justify-between mx-auto gap-x-8 gap-y-24"
+                            >
+                                <div class="flex form-item flex-col w-full lg:w-[2.35rem]">
+                                    <label for="name-add" class="text-s font-semibold mb-4">
+                                        Ім’я</label
+                                    >
+                                    <input
+                                            type="text"
+                                            name="name"
+                                            id="name-calc"
+                                            class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
+                                    />
+                                    <div class="form-item__message"></div>
+                                </div>
+                                <div class="flex form-item flex-col w-full lg:w-[2.35rem]">
+                                    <label for="phone-add" class="text-s mb-4">
+                                        Номер телефона</label
+                                    >
+                                    <input
+                                            type="text"
+                                            name="phone"
+                                            id="phone-calc"
+                                            class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
+                                    />
+                                    <div class="form-item__message"></div>
+                                </div>
+                                <button
+                                        type="submit"
+                                        class="btn-black h-[0.54rem] self-end w-full lg:w-auto"
+                                >
+                                    Відправити
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div
+                            class="image w-full h-[3.26rem] sm:h-[6rem] lg:h-full rounded-30 overflow-hidden"
+                    >
+                        <img class="object-cover" src="@img/form.png" alt="form_img"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="w-screen h-screen preloader flex items-center justify-center fixed top-0 z-50">
+        <div class="size-[1.3rem]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                <radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                    <stop offset="0" stop-color="#F9E2BF"></stop>
+                    <stop offset=".3" stop-color="#F9E2BF" stop-opacity=".9"></stop>
+                    <stop offset=".6" stop-color="#F9E2BF" stop-opacity=".6"></stop>
+                    <stop offset=".8" stop-color="#F9E2BF" stop-opacity=".3"></stop>
+                    <stop offset="1" stop-color="#F9E2BF" stop-opacity="0"></stop>
+                </radialGradient>
+                <circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="15"
+                        stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100"
+                        r="70">
+                    <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2"
+                                      values="360;0"
+                                      keyTimes="0;1" keySplines="0 0 1 1"
+                                      repeatCount="indefinite"></animateTransform>
+                </circle>
+                <circle transform-origin="center" fill="none" opacity=".2" stroke="#FF156D" stroke-width="15"
+                        stroke-linecap="round" cx="100" cy="100" r="70"></circle>
+            </svg>
+        </div>
 
-			@@include('html/_footer.html',{})
-		</div>
-		@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
-		<script src="js/app.min.js"></script>
-		<script src="js/catalog.min.js"></script>
-	</body>
+    </div>
+    @@include('html/_footer.html',{})
+</div>
+@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
+<script src="js/app.min.js"></script>
+<script src="js/catalog.min.js"></script>
+</body>
 </html>

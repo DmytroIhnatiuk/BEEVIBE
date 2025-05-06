@@ -13,20 +13,21 @@ $variation_link = $variation_product->get_permalink();
 ?>
 
 
-<div
-        class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+<div  data-product="<?= $id ?>"
+        class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow flex flex-col h-full"
 >
-    <div
-            class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+    <a href="<?= esc_url($variation_link); ?>"
+       class="image w-full pt-[97%] block rounded-30 overflow-hidden mb-8 sm:mb-16"
     >
         <?= dn_get_image_attachment(getImageByThumb($id), 'full', 'Фото - ' . get_the_title(), 'object-cover') ?>
 
-    </div>
-    <h3 class="h4 font-semibold mb-4 sm:mb-8">
+    </a>
+    <a
+            href="<?= esc_url($variation_link); ?>" class="h4 font-semibold mb-4 sm:mb-8">
         <?= get_the_title($id); ?>
-    </h3>
+    </a>
     <div class="mb-4 sm:mb-8 text-s sm:text-m"><?= $variation_product->get_attribute('pa_volume') ?></div>
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center mt-auto">
         <div class="sm:text-[.2rem] font-semibold"> <?= $regular_price ?> грн</div>
         <s class="text-gray  text-s block"><?php if ($sale_price) {
                 echo $sale_price . ' грн';
@@ -42,6 +43,7 @@ $variation_link = $variation_product->get_permalink();
                     <use href="#arrow-icon"></use>
                 </svg>
             </a>
+            <input type="hidden" data-quantity value="1" class="hidden">
             <button data-cart="<?= $variation_product->get_ID(); ?>"
                     class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
             >
@@ -54,12 +56,21 @@ $variation_link = $variation_product->get_permalink();
         </div>
     </div>
     <div class="flex absolute -top-6">
-        <div
-                class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-        >
-            Bestseller
-        </div>
-        <?php if ($sale_price): ?>
+        <?php if (get_field('bestseller', $id)): ?>
+            <div
+                    class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+            >
+                Bestseller
+            </div>
+        <?php endif;
+        if (get_field('new', $id)): ?>
+            <div
+                    class="p-8 uppercase text-s font-bold rounded-30 bg-khaki"
+            >
+                new
+            </div>
+        <?php endif;
+        if ($sale_price): ?>
             <div
                     class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
             >

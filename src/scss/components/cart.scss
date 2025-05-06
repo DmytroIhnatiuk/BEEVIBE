@@ -1,0 +1,16 @@
+#cart {
+  height: calc(var(--vh, 1vh) * 95);
+  transform: translateX(100%);
+
+
+  &.active {
+    transform: translateX(0);
+    transition: transform .3s ease-in-out;
+  }
+}
+
+.woocommerce-cart-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

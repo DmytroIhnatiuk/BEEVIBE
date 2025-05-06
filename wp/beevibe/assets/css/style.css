@@ -59,6 +59,10 @@ html {
   --red: #f33d46;
   --error: #f33d46;
   --orange-gradient: linear-gradient( 105deg, #eea63a 19.39%, #fbc26c 35.82%, #df9930 75.6% );
+  --slider-color: #6d6d6d;
+  --range-color: #252525
+}
+:root {
   --header-height: 0.84rem;
   --header-height-decrement: -0.84rem;
   --container-gap: 0.16rem
@@ -220,23 +224,20 @@ body {
   min-height: -webkit-fill-available
 }
 body::before {
-  content: "";
-  position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  background: rgba(16,17,19,.2);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  opacity: 0;
-  visibility: hidden;
-  backdrop-filter: blur(.05rem);
+  content: "";
+  position: fixed;
+  background: rgba(109,109,109,.3);
+  backdrop-filter: blur(.04rem);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate(0) translate3d(0,0,0) translateZ(0);
-  transform: translate(0) translate3d(0,0,0) translateZ(0);
-  z-index: 40
+  -webkit-transform: translate3d(0,0,0) translateZ(0);
+  transform: translate3d(0,0,0) translateZ(0);
+  opacity: 0;
+  transition: opacity .3s linear
 }
 body.fixed::before,
 body.overlay::before {
@@ -244,7 +245,7 @@ body.overlay::before {
   z-index: 10
 }
 body.overlay::before {
-  z-index: 8
+  z-index: 100
 }
 body.active {
   overflow: hidden;
@@ -275,10 +276,6 @@ body.active::before {
 }
 .projects-filter input:checked+span svg {
   stroke: var(--black)
-}
-.projects-filter.active {
-  -webkit-transform: translateX(3.5rem);
-  transform: translateX(3.5rem)
 }
 .filter-btn.active svg {
   -webkit-transform: scale(-1,1);
@@ -336,9 +333,9 @@ input[type=range]::-webkit-slider-thumb {
   pointer-events: all;
   width: .12rem;
   height: .12rem;
-  background-color: var(--white);
+  background-color: var(--range-color);
   border-radius: 50%;
-  border: 1.5px solid var(--white);
+  border: 1.5px solid var(--range-color);
   cursor: pointer;
   -webkit-transition: all .3s linear;
   transition: all .3s linear
@@ -348,15 +345,15 @@ input[type=range]::-moz-range-thumb {
   pointer-events: all;
   width: .12rem;
   height: .12rem;
-  background-color: var(--white);
+  background-color: var(--range-color);
   border-radius: 50%;
   cursor: pointer
 }
 input[type=range]::-webkit-slider-thumb:hover {
-  background-color: var(--white)
+  background-color: var(--range-color)
 }
 input[type=range]::-webkit-slider-thumb:active {
-  background-color: var(--white)
+  background-color: var(--range-color)
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -369,7 +366,7 @@ input[type=range] {
   left: 2px;
   right: 2px;
   position: absolute;
-  background-color: var(--white);
+  background-color: var(--slider-color);
   pointer-events: none
 }
 input[type=range]::after,
@@ -377,7 +374,7 @@ input[type=range]::before {
   width: 2px;
   height: 2px;
   top: 0;
-  background-color: var(--white);
+  background-color: var(--slider-color);
   content: "";
   position: absolute;
   border-radius: 50%
@@ -425,6 +422,8 @@ header.active .active-none {
   display: none!important
 }
 .burger {
+  align-items: center;
+  justify-content: center;
   height: .32rem;
   width: .32rem;
   background: var(--black);
@@ -432,9 +431,6 @@ header.active .active-none {
   color: inherit;
   cursor: pointer;
   z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: border .3s
 }
 .burger:focus {
@@ -642,6 +638,35 @@ input.disabled {
   overflow: hidden;
   transition: max-height .3s ease-out
 }
+[data-swiper=productSliderNav] .swiper-slide {
+  opacity: .7;
+  transition: opacity .3s linear;
+  cursor: pointer
+}
+[data-swiper=productSliderNav] .swiper-slide:hover {
+  opacity: 9
+}
+[data-swiper=productSliderNav] .swiper-slide.swiper-slide-thumb-active {
+  opacity: 1;
+  cursor: default
+}
+#cart {
+  height: calc(var(--vh,1vh)*95);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%)
+}
+#cart.active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out,-webkit-transform .3s ease-in-out
+}
+.woocommerce-cart-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
 .video_wrapper .video_img,
 .video_wrapper .video_play {
   transition: opacity .3s ease-in-out
@@ -656,9 +681,36 @@ input.disabled {
   z-index: -1;
   visibility: hidden
 }
+.page-numbers {
+  font-weight: 500
+}
+.page-numbers .current {
+  font-weight: 600
+}
 .volume-btn.active {
   border-color: var(--orange);
   background: var(--orange)
+}
+[data-fullscreen] {
+  height: 100vh;
+  height: calc(var(--vh,1vh)*100)
+}
+.preloader {
+  background: rgba(109,109,109,.3);
+  backdrop-filter: blur(4px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0) translateZ(0);
+  transform: translate3d(0,0,0) translateZ(0);
+  transition: all .3s linear
+}
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden
+}
+.preloader .show {
+  opacity: 1;
+  visibility: visible
 }
 @media all and (min-width:640px) {
   :root {
@@ -701,22 +753,22 @@ input.disabled {
     border-color: var(--black)
   }
   .range__value div {
-    border: 1px solid var(--black)
+    border: 1px solid var(--range-color)
   }
   .range input[type=range]::-webkit-slider-thumb {
-    background-color: var(--black);
-    border: 1.5px solid var(--black)
+    background-color: var(--range-color);
+    border: 1.5px solid var(--range-color)
   }
   .range input[type=range]::-moz-range-thumb {
-    background-color: var(--black);
+    background-color: var(--range-color);
     cursor: pointer
   }
   .range input[type=range] {
-    background-color: var(--black)
+    background-color: var(--slider-color)
   }
   .range input[type=range]::after,
   .range input[type=range]::before {
-    background-color: var(--black)
+    background-color: var(--slider-color)
   }
   .accordion .accordion-content {
     min-height: -webkit-max-content;
@@ -755,9 +807,38 @@ input.disabled {
     font-size: 13.0208333333vw
   }
 }
+@media all and (max-width:1020px) {
+  :root {
+    --slider-color: #f3c580;
+    --range-color: #fbf4ea
+  }
+}
 @media all and (max-width:992px) {
   .modal {
     padding: .48rem 0
+  }
+}
+@media (max-width:992px) {
+  .projects-filter {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    left: -100vw;
+    border-radius: 0;
+    transition: left .3s linear
+  }
+  .projects-filter.active {
+    left: 0
+  }
+  .projects-filter form {
+    height: 100%
+  }
+  .projects-filter .filter-items {
+    overflow-y: auto;
+    margin-bottom: .16rem;
+    padding-bottom: .16rem
   }
 }
 @media all and (max-width:767px) {

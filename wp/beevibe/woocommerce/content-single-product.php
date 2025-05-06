@@ -22,7 +22,7 @@ $variation_product = get_default_product($product);
 $attributes = $product->get_variation_attributes();
 $id = $product->get_ID();
 ?>
-<section
+<section data-product
         class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
 >
     <div class="container">
@@ -61,23 +61,47 @@ $id = $product->get_ID();
 
                                 </div>
                             </div>
-                            <?php if (get_field('gallery')):
-                                foreach (get_field('gallery') as $idx => $image): ?>
-                                    <div class="image size-full rounded-20 overflow-hidden">
-                                        <?= dn_get_image_attachment($image, 'full', 'Фото - ' . get_the_title() . '#' . $idx + 1, 'object-cover') ?>
+                            <?php
+                            if (have_rows('gallery')):
+                                while (have_rows('gallery')) : the_row();
+                                    $isVideo = get_sub_field('gallery_type') === '2';
+                                    $image = $isVideo ? get_sub_field('preview') : get_sub_field('photo'); ?>
+                                    <div class="swiper-slide">
+                                        <div class="<?= $isVideo ? 'video-item' : ''; ?> relative size-full rounded-20 overflow-hidden">
+                                            <div class="image size-full">
+                                                <?= dn_get_image_attachment($image, 'full', 'Фото - ' . get_the_title() . '#' . get_row_index(), 'object-cover') ?>
+                                                <?php if ($isVideo): ?>
+                                                    <button data-video-play=""
+                                                            class="z-[5] group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[.6rem] flex items-center justify-center">
+                                                        <svg class="size-full fill-white  group-hover:fill-orange transition-colors duration-300">
+                                                            <use href="#icon-play"></use>
+                                                        </svg>
+                                                    </button>
+                                                <?php endif; ?>
+                                            </div>
+                                            <?php if ($isVideo): ?>
+                                                <div class="video-container top-0  absolute w-full h-full"
+                                                     data-video="<?= get_sub_field('video'); ?>">
+                                                </div>
+                                            <?php endif; ?>
 
+                                        </div>
                                     </div>
 
-
-                                <?php endforeach; endif; ?>
+                                <?php endwhile;
+                            endif;
+                            ?>
 
 
                         </div>
-                        <div
-                                class="rounded-30 bg-orange p-8 font-semibold uppercase top-8 left-8 sm:top-12 sm:left-12 absolute z-10"
-                        >
-                            Bestseller
-                        </div>
+                        <?php if (get_field('bestseller')): ?>
+                            <div
+                                    class="rounded-30 bg-orange p-8 font-semibold uppercase top-8 left-8 sm:top-12 sm:left-12 absolute z-10"
+                            >
+                                Bestseller
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                     <div
                             class="swiper sm:h-[4.9rem] sm:w-[1.4rem] !min-w-0 w-wull max-w-full"
@@ -92,18 +116,30 @@ $id = $product->get_ID();
 
                                 </div>
                             </div>
-                            <?php if (get_field('gallery')):
-                                foreach (get_field('gallery') as $idx => $image): ?>
+                            <?php
+                            if (have_rows('gallery')):
+                                while (have_rows('gallery')) : the_row();
+                                    $isVideo = get_sub_field('gallery_type') === '2';
+                                    $image = $isVideo ? get_sub_field('preview') : get_sub_field('photo'); ?>
                                     <div class="swiper-slide">
                                         <div
                                                 class=" image w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
                                         >
-                                            <?= dn_get_image_attachment($image, 'full', 'Фото - ' . get_the_title() . '#' . $idx + 1, 'object-cover') ?>
-
+                                            <?= dn_get_image_attachment($image, 'full', 'Фото - ' . get_the_title() . '#' . get_row_index(), 'object-cover') ?>
+                                            <?php if ($isVideo): ?>
+                                                <div
+                                                        class="z-[5]  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-36 flex items-center justify-center">
+                                                    <svg class="size-full fill-white ">
+                                                        <use href="#icon-play"></use>
+                                                    </svg>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
 
-                                <?php endforeach; endif; ?>
+                                <?php endwhile;
+                            endif;
+                            ?>
 
 
                         </div>
@@ -156,6 +192,7 @@ $id = $product->get_ID();
                                 -
                             </button>
                             <label class="pointer-events-none"> <input
+                                        data-quantity
                                         type="number"
                                         min="1"
                                         value="1"
@@ -173,14 +210,16 @@ $id = $product->get_ID();
                     >
                         <?php
                         $regular_price = $variation_product->get_regular_price();
+
                         $sale_price = $variation_product->get_sale_price();
                         ?>
                         <h2 data-price="" class="h3 font-semibold flex-shrink-0">
                             <?= $regular_price ?> грн</h2>
-                        <s data-sale-price="" class="text-gray flex-shrink-0"><?php if ($sale_price) {
+                        <s data-sale-price="" class="text-gray flex-shrink-0">
+                            <?php if ($sale_price) {
                                 echo $sale_price . ' грн';
                             } ?></s>
-                        <button data-product-id="<?= $variation_product->get_ID() ?>" class="btn-black w-full">В кошик
+                        <button data-cart="<?= $variation_product->get_ID() ?>" data-product-id="<?= $variation_product->get_ID() ?>" class="btn-black w-full">В кошик
                         </button>
                     </div>
                     <div class="flex gap-4 sm:gap-16 text-s sm:text-m">
@@ -208,11 +247,14 @@ $id = $product->get_ID();
                         >
                             Характеристика
                         </div>
-                        <div
-                                class="btn-outline btn-customize cursor-pointer flex-shrink-0"
-                        >
-                            Активні компоненти
-                        </div>
+                        <?php if (get_field('ingredients')): ?>
+                            <div
+                                    class="btn-outline btn-customize cursor-pointer flex-shrink-0"
+                            >
+                                Склад
+                            </div>
+                        <?php endif; ?>
+
                     </div>
 
                     <div>
@@ -222,65 +264,58 @@ $id = $product->get_ID();
                         <div
                                 class="content-customize overflow-hidden bg-bg grid grid-cols-[1fr,3fr] gap-x-16"
                         >
-                            <div class="font-semibold">Тип засобу:</div>
-                            <div>кремова детокс-маска</div>
-                            <div class="font-semibold">Для кого:</div>
-                            <div>
-                                жирна та комбінована шкіра, схильна до комедонів,
-                                висипань і жирного блиску
-                            </div>
-                            <div class="font-semibold">Основні ефекти:</div>
-                            <ul>
-                                <li>• очищення пор та видалення чорних цяток</li>
-                                <li>• зменшення висипань</li>
-                                <li>• матування без пересушування</li>
-                                <li>• заспокійливий та протизапальний ефект</li>
-                            </ul>
-                            <div class="font-semibold">Активні компоненти:</div>
-                            <div>
-                                жирна та комбінована шкіра, схильна до комедонів,
-                                висипань і жирного блиску
-                            </div>
-                            <div class="font-semibold">Текстура:</div>
-                            <div>кремова, легко наноситься і змивається</div>
-                            <div class="font-semibold">Застосування:</div>
-                            <div>
-                                2–3 рази на тиждень на очищену шкіру на 10–15 хвилин
-                            </div>
-                            <div class="font-semibold">Колір:</div>
-                            <div>
-                                зелений (може змінюватися через натуральні пігменти — це
-                                нормально)
-                            </div>
+                            <?php if (get_field('type') && count(get_field('type'))):
+
+                                ?>
+                                <div class="font-semibold">Тип шкіри:</div>
+                                <div>
+                                    <?php
+                                    $labels = array_map(function ($item) {
+                                        return $item['label'];
+                                    }, get_field('type'));
+                                    echo implode(", ", $labels); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (get_field('for_whom')): ?>
+                                <div class="font-semibold">Для кого:</div>
+                                <div><?= get_field('for_whom') ?></div>
+                            <?php endif;
+                            if (get_field('main_effects') && count(get_field('main_effects'))): ?>
+                                <div class="font-semibold">Запит шкіри:</div>
+                                <ul>
+                                    <?php foreach (get_field('main_effects') as $effect): ?>
+                                        <li>• <?= $effect['label'] ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif;
+                            if (get_field('active_ingredients') && count(get_field('active_ingredients'))): ?>
+                                <div class="font-semibold">Активні компоненти:</div>
+                                <ul>
+                                    <?php foreach (get_field('active_ingredients') as $active): ?>
+                                        <li>• <?= $active['component'] ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif;
+                            if (get_field('texture')): ?>
+                                <div class="font-semibold">Текстура:</div>
+                                <div><?= get_field('texture') ?></div>
+                            <?php endif;
+                            if (get_field('usage')): ?>
+                                <div class="font-semibold">Застосування:</div>
+                                <div>
+                                    <?= get_field('usage'); ?>
+                                </div>
+                            <?php endif; ?>
+
+
                         </div>
-                        <div class="content-customize overflow-hidden bg-bg">
-                            <ul>
-                                <li>
-                                    • Біла та зелена глина — вбирають зайвий жир і
-                                    очищають пори.
-                                </li>
-                                <li>
-                                    • Саліцилова кислота — розчиняє забруднення всередині
-                                    пор і зменшує акне
-                                </li>
-                                <li>
-                                    • Спіруліна — природний компонент, який заспокоює
-                                    шкіру, зменшує почервоніння
-                                </li>
-                                <li>
-                                    • Масляний екстракт прополісу — антибактеріальний та
-                                    заспокійливий ефект
-                                </li>
-                                <li>
-                                    • Пудра HIM — регулює жирність і бореться з
-                                    висипаннями
-                                </li>
-                                <li>
-                                    •  Мед   – живить шкіру, пом’якшує її та допомагає
-                                    швидше загоювати дрібні запалення.
-                                </li>
-                            </ul>
-                        </div>
+                        <?php if (get_field('ingredients')): ?>
+                            <div class="content-customize overflow-hidden bg-bg">
+                                <?= get_field('ingredients'); ?>
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
             </div>
@@ -288,7 +323,7 @@ $id = $product->get_ID();
     </div>
 </section>
 
-<?= get_template_part('template-parts/blocks/reviews'); ?>
+<?= get_template_part('template-parts/blocks/reviews', false, ['product' => $id]); ?>
 <?= get_template_part('template-parts/blocks/before_after'); ?>
 <?php $upsell_ids = $product->get_upsell_ids();
 if (count($upsell_ids)): ?>
@@ -302,23 +337,23 @@ if (count($upsell_ids)): ?>
                 <div class="swiper-wrapper pt-6 pb-24 sm:pb-32">
                     <?php foreach ($upsell_ids as $upsell_id) {
                         $upsell_product = wc_get_product($upsell_id); ?>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide h-auto">
                             <?= get_template_part('template-parts/blocks/product-card', false, ['product' => $upsell_product]); ?>
                         </div>
                     <?php } ?>
 
                 </div>
                 <div
-                        class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                        class=" swiper-navigation flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                 >
-                    <button class="slider-btn prev">
+                    <button class="slider-btn  swiper-button prev">
                         <svg
                                 class="size-full d fill-transparent stroke-black rotate-90"
                         >
                             <use xlink:href="#cheven-icon"></use>
                         </svg>
                     </button>
-                    <button class="slider-btn next">
+                    <button class="slider-btn  swiper-button next">
                         <svg
                                 class="size-full d fill-transparent stroke-black -rotate-90"
                         >

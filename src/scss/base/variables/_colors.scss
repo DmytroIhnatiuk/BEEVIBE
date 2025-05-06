@@ -14,4 +14,10 @@
 		#fbc26c 35.82%,
 		#df9930 75.6%
 	);
+	--slider-color: #6d6d6d;
+	--range-color: #252525;
+	@media all and (max-width: 1020px){
+		--slider-color: #f3c580;
+		--range-color: #fbf4ea;
+	}
 }

@@ -3,6 +3,13 @@
 	@@include('html/_head.html',{ "title":"about" })
 	<body class="body text-dark-blue">
 		<div class="page-container">
+			<button type="button"
+					class=" absolute top-24 right-16 sm:right-100 cart-close rounded size-32 bg-transparent border border-solid border-black flex-center lg:hover:bg-light-orange lg:hover:border-light-orange transition-colors duration-300"
+			>
+			<span
+					class="block relative size-16 before:absolute before:h-[1px] before:w-16 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-16 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45"
+			></span>
+			</button>
 			@@include('html/_header.html',{})
 			<main>
 				<section class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]">

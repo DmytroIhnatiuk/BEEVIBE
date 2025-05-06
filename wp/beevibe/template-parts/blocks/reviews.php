@@ -1,11 +1,17 @@
 <?php
-$reviews = dn_get_items('product-review');
-
-if (count($reviews)) {
+/**
+ * Template part for displaying reviews
+ *
+ * @package Beevibe
+ */
+$id = $args['product'] ?? null;
+if (!$id) return;
+$reviews = get_field('reviews', $id);
+if ($reviews && count($reviews)) {
     $video_reviews = [];
     $text_reviews = [];
     foreach ($reviews as $review) {
-        $type = get_field('review_type', $review->ID);
+        $type = $review['review_type'];
         if ($type === '2') {
             $video_reviews[] = $review;
         } elseif ($type === '1') {
@@ -75,7 +81,7 @@ if (count($reviews)) {
                                                         class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
                                                 >
                                                     <div class="image size-full">
-                                                        <?= dn_get_image_attachment(get_field('review_img', $review->ID), 'full', 'Відгук - №' . $idx + 1, 'object-contain') ?>
+                                                        <?= dn_get_image_attachment($review['review_img'], 'full', 'Відгук - №' . $idx + 1, 'object-contain') ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,16 +89,17 @@ if (count($reviews)) {
 
                                 </div>
                                 <div
-                                        class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                        class=" swiper-navigation
+                                       flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                                 >
-                                    <button class="slider-btn prev">
+                                    <button class="slider-btn  swiper-button prev">
                                         <svg
                                                 class="size-full d fill-transparent stroke-black rotate-90"
                                         >
                                             <use xlink:href="#cheven-icon"></use>
                                         </svg>
                                     </button>
-                                    <button class="slider-btn next">
+                                    <button class="slider-btn  swiper-button next">
                                         <svg
                                                 class="size-full d fill-transparent stroke-black -rotate-90"
                                         >
@@ -113,28 +120,39 @@ if (count($reviews)) {
 
                                             ?>
                                             <div class="swiper-slide">
-                                                <div
-                                                        class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-                                                >
-                                                    <div class="image size-full">
-                                                        <video class="absolute h-full object-cover w-full"
-                                                               src="<?= get_field('video', $review->ID) ?>"></video>
+                                                <div class="border video-item  relative border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30">
+
+                                                    <div
+                                                            class="image size-full"
+                                                    >
+                                                        <?= dn_get_image_attachment($review['preview_img'], 'full', 'Відгук - №' . $idx + 1, 'object-cover transition-opacity') ?>
+                                                        <button data-video-play=""
+                                                                class="z-[5] group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[.6rem] flex items-center justify-center">
+                                                            <svg class="size-full fill-white  group-hover:fill-orange transition-colors duration-300">
+                                                                <use href="#icon-play"></use>
+                                                            </svg>
+                                                        </button>
+
+                                                    </div>
+
+                                                    <div class="video-container top-0  absolute w-full h-full"
+                                                         data-video="<?= $review['video'] ?>">
                                                     </div>
                                                 </div>
                                             </div>
                                         <?php } endif; ?>
                                 </div>
                                 <div
-                                        class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                        class="flex justify-end sm:justify-center gap-16  swiper-navigation pr-[var(--container-gap)] lg:pr-0"
                                 >
-                                    <button class="slider-btn prev">
+                                    <button class="slider-btn  swiper-button prev">
                                         <svg
                                                 class="size-full d fill-transparent stroke-black rotate-90"
                                         >
                                             <use xlink:href="#cheven-icon"></use>
                                         </svg>
                                     </button>
-                                    <button class="slider-btn next">
+                                    <button class="slider-btn  swiper-button next">
                                         <svg
                                                 class="size-full d fill-transparent stroke-black -rotate-90"
                                         >

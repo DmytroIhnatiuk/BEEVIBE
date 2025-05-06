@@ -178,13 +178,16 @@
 			</div>
 
 			<button
-				class="size-32 rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group mr-8 lg:mr-12 ml-auto lg:ml-0"
+				class="cart-trigger relative size-32 rounded-[50%] flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group mr-8 lg:mr-12 ml-auto lg:ml-0"
 			>
 				<svg
 					class="size-24 fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
 				>
 					<use href="#basket-icon"></use>
 				</svg>
+				<span data-cart-count class="absolute rounded size-16 flex items-center justify-center bg-orange text-12  font-medium">
+					10
+				</span>
 			</button>
 			<a
 				href="#"

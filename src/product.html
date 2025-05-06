@@ -1,892 +1,926 @@
 <!doctype html>
 <html lang="ua">
-	@@include('html/_head.html',{ "title":"product" })
-	<body class="body text-dark-blue">
-		<div class="page-container">
-			@@include('html/_header.html',{})
-			<main>
-				<section
-					class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
-				>
-					<div class="container">
-						<div class="flex mb-32 lg:mb-[0.64rem]">
-							<a
-								href="index.html "
-								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
-								>Головна</a
-							>
-							<span class="px-4">/</span>
-							<a
-								href="index.html "
-								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
-								>Каталог</a
-							>
-							<span class="px-4">/</span>
-							<a
-								href="#"
-								class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
-								>Антицелюлітний скраб</a
-							>
-						</div>
-						<div class="lg:grid lg:grid-cols-2 gap-20">
-							<div class="relative h-full">
-								<div
-									class="gap-14 block sm:flex sm:flex-row-reverse mb-16 lg:mb-0 sticky top-10"
-								>
-									<div
-										class="swiper sm:w-[4.55rem] h-[3.69rem] sm:h-[4.9rem] rounded-20 overflow-hidden w-wull max-w-full mb-16 sm:mb-0"
-										data-swiper="productSlider"
-									>
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="image size-full rounded-20 overflow-hidden">
-													<img
-														class="object-cover"
-														src="@img/about_1.png"
-														alt=""
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="image size-full rounded-20 overflow-hidden">
-													<img
-														class="object-cover"
-														src="@img/about_2.png"
-														alt=""
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="image size-full rounded-20 overflow-hidden">
-													<img
-														class="object-cover"
-														src="@img/about_1.png"
-														alt=""
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="image size-full rounded-20 overflow-hidden">
-													<img
-														class="object-cover"
-														src="@img/about_2.png"
-														alt=""
-													/>
-												</div>
-											</div>
-										</div>
-										<div
-											class="rounded-30 bg-orange p-8 font-semibold uppercase top-8 left-8 sm:top-12 sm:left-12 absolute z-10"
-										>
-											Bestseller
-										</div>
-									</div>
-									<div
-										class="swiper sm:h-[4.9rem] sm:w-[1.4rem] !min-w-0 w-wull max-w-full"
-										data-swiper="productSliderNav"
-									>
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div
-													class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
-												>
-													<img
-														class="object-cover"
-														src="@img/about_1.png"
-														alt="image"
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div
-													class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
-												>
-													<img
-														class="object-cover"
-														src="@img/about_2.png"
-														alt="image"
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div
-													class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
-												>
-													<img
-														class="object-cover"
-														src="@img/about_1.png"
-														alt="image"
-													/>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div
-													class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
-												>
-													<img
-														class="object-cover"
-														src="@img/about_2.png"
-														alt="image"
-													/>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+@@include('html/_head.html',{ "title":"product" })
+<body class="body text-dark-blue">
+<div class="page-container">
+    @@include('html/_header.html',{})
+    <main>
+        <section
+                class="mt-[var(--header-height)] pt-24 lg:pt-32 mb-[.64rem] lg:mb-[1.1rem]"
+        >
+            <div class="container">
+                <div class="flex mb-32 lg:mb-[0.64rem]">
+                    <a
+                            href="index.html "
+                            class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+                    >Головна</a
+                    >
+                    <span class="px-4">/</span>
+                    <a
+                            href="index.html "
+                            class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+                    >Каталог</a
+                    >
+                    <span class="px-4">/</span>
+                    <a
+                            href="#"
+                            class="lg:hover:text-orange transition-colors duration-300 ease-linear last:pointer-events-none"
+                    >Антицелюлітний скраб</a
+                    >
+                </div>
+                <div class="lg:grid lg:grid-cols-2 gap-20">
+                    <div class="relative h-full">
+                        <div
+                                class="gap-14 block sm:flex sm:flex-row-reverse mb-16 lg:mb-0 sticky top-10"
+                        >
+                            <div
+                                    class="swiper sm:w-[4.55rem] h-[3.69rem] sm:h-[4.9rem] rounded-20 overflow-hidden w-wull max-w-full mb-16 sm:mb-0"
+                                    data-swiper="productSlider"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class=" video-item  relative size-full rounded-20 overflow-hidden">
+                                            <div class="image size-full">
+                                                <img width="601" height="758"
+                                                     src="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png"
+                                                     class="object-cover transition-opacity" alt="Відгук - №1"
+                                                     decoding="async" loading="lazy"
+                                                     srcset="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png 601w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-238x300.png 238w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-143x180.png 143w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-325x410.png 325w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-285x360.png 285w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-381x480.png 381w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-385x486.png 385w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-242x305.png 242w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-349x440.png 349w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-71x89.png 71w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-218x275.png 218w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-190x240.png 190w"
+                                                     sizes="auto, (max-width: 601px) 100vw, 601px">
+                                                <button data-video-play=""
+                                                        class="z-[5] group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[.6rem] flex items-center justify-center">
+                                                    <svg class="size-full fill-white  group-hover:fill-orange transition-colors duration-300">
+                                                        <use href="#icon-play"></use>
+                                                    </svg>
+                                                </button>
 
-							<div>
-								<div
-									class="bg-white w-full box-shadow rounded-20 sm:p-32 px-16 py-24 lg:min-h-[4.9rem] mb-32"
-								>
-									<h1 class="h3 mb-4 sm:mb-8">Зелена детокс крем-маска</h1>
-									<div class="flex gap-14 sm:gap-50 items-center mb-4 sm:mb-8">
-										<div class="font-semibold">Артикул: 00010001</div>
-										<div class="py-8 px-24 rounded-20 bg-khaki font-medium">
-											В наявності
-										</div>
-									</div>
-									<p class="mb-12 sm:mb-24">
-										Зелена детокс-крем-маска BeeVibe — видаляє чорні цятки та
-										глибоко очищає пори, створена для жирної та комбінованої
-										шкіри.
-									</p>
-									<div class="flex gap-16 items-center mb-12 sm:mb-16">
-										<label class="font-semibold">Об’єм</label>
-										<div class="flex flex-wrap gap-16 items-center">
-											<button class="volume-btn btn-outline">50мл</button>
-											<button class="volume-btn btn-outline active">
-												100мл
-											</button>
-											<button class="volume-btn btn-outline">200мл</button>
-											<button class="volume-btn btn-outline">200мл</button>
-										</div>
-									</div>
-									<div class="flex gap-16 items-center mb-12 sm:mb-16">
-										<label class="font-semibold">Кількість</label>
-										<div
-											class="quantity-selector border border-solid border-black rounded-30 gap-24 py-8 px-16"
-										>
-											<button class="qty-btn mr-24" data-action="decrease">
-												-
-											</button>
-											<input
-												type="number"
-												min="1"
-												value="1"
-												class="qty-input w-36 text-center"
-											/>
-											<button class="qty-btn ml-24" data-action="increase">
-												+
-											</button>
-										</div>
-									</div>
-									<div
-										class="flex items-center gap-24 mb-12 sm:mb-50 flex-wrap sm:flex-nowrap"
-									>
-										<h2 class="h3 font-semibold flex-shrink-0">450 грн</h2>
-										<s class="text-gray flex-shrink-0">550 грн</s>
-										<button class="btn-black w-full">В кошик</button>
-									</div>
-									<div class="flex gap-4 sm:gap-16 text-s sm:text-m">
-										<svg class="size-40 fill-black block flex-shrink-0">
-											<use href="#delivery-icon"></use>
-										</svg>
-										<p>
-											Доставка по Україні здійснюється Новою поштою. Вартість
-											доставки розраховується поштовою службою
-										</p>
-									</div>
-								</div>
-								<div class="tabs-customize">
-									<div class="flex gap-8 mb-16 overflow-x-scroll">
-										<div
-											class="btn-outline btn-customize cursor-pointer flex-shrink-0"
-										>
-											Опис товару
-										</div>
-										<div
-											class="btn-outline btn-customize cursor-pointer flex-shrink-0"
-										>
-											Характеристика
-										</div>
-										<div
-											class="btn-outline btn-customize cursor-pointer flex-shrink-0"
-										>
-											Активні компоненти
-										</div>
-									</div>
+                                            </div>
 
-									<div>
-										<div class="content-customize overflow-hidden bg-bg">
-											Антицелюлітний скраб, що робить шкіру неймовірно
-											гладенькою та пружною вже після кількох
-											використань. Завдяки кавовим частинкам, він ефективно
-											відлущує ороговілі клітини, бореться з проявами целюліту
-											та повертає шкірі тонус. Під час масажу скраб
-											перетворюється на ніжне молочко завдяки натуральним оліям,
-											які глибоко живлять і зволожують шкіру. Після процедури
-											шкіра буде шовковистою на дотик, неймовірно гладкою, а
-											насичений кавовий аромат залишиться на тілі
-										</div>
-										<div
-											class="content-customize overflow-hidden bg-bg grid grid-cols-[1fr,3fr] gap-x-16"
-										>
-											<div class="font-semibold">Тип засобу:</div>
-											<div>кремова детокс-маска</div>
-											<div class="font-semibold">Для кого:</div>
-											<div>
-												жирна та комбінована шкіра, схильна до комедонів,
-												висипань і жирного блиску
-											</div>
-											<div class="font-semibold">Основні ефекти:</div>
-											<ul>
-												<li>• очищення пор та видалення чорних цяток</li>
-												<li>• зменшення висипань</li>
-												<li>• матування без пересушування</li>
-												<li>• заспокійливий та протизапальний ефект</li>
-											</ul>
-											<div class="font-semibold">Активні компоненти:</div>
-											<div>
-												жирна та комбінована шкіра, схильна до комедонів,
-												висипань і жирного блиску
-											</div>
-											<div class="font-semibold">Текстура:</div>
-											<div>кремова, легко наноситься і змивається</div>
-											<div class="font-semibold">Застосування:</div>
-											<div>
-												2–3 рази на тиждень на очищену шкіру на 10–15 хвилин
-											</div>
-											<div class="font-semibold">Колір:</div>
-											<div>
-												зелений (може змінюватися через натуральні пігменти — це
-												нормально)
-											</div>
-										</div>
-										<div class="content-customize overflow-hidden bg-bg">
-											<ul>
-												<li>
-													• Біла та зелена глина — вбирають зайвий жир і
-													очищають пори.
-												</li>
-												<li>
-													• Саліцилова кислота — розчиняє забруднення всередині
-													пор і зменшує акне
-												</li>
-												<li>
-													• Спіруліна — природний компонент, який заспокоює
-													шкіру, зменшує почервоніння
-												</li>
-												<li>
-													• Масляний екстракт прополісу — антибактеріальний та
-													заспокійливий ефект
-												</li>
-												<li>
-													• Пудра HIM — регулює жирність і бореться з
-													висипаннями
-												</li>
-												<li>
-													•  Мед   – живить шкіру, пом’якшує її та допомагає
-													швидше загоювати дрібні запалення.
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="mb-[.64rem] lg:mb-[1.1rem]">
-					<div class="lg:px-[var(--container-gap)] pl-[var(--container-gap)]">
-						<div
-							class="lg:flex justify-between mb-16 sm:mb-36 pr-[var(--container-gap)] lg:pr-0"
-						>
-							<h2 class="mb-24 lg:mb-0">
-								<span class="lg:block">500+ реальних відгуків</span>
-							</h2>
+                                            <div class="video-container  absolute w-full h-full"
+                                                 data-video="https://beevibe.com.ua/wp-content/uploads/2025/04/img_4885.mp4">
+                                            </div>
+                                        </div>
 
-							<a
-								class="py-8 sm:pl-40 pr-8 text-black rounded-30 bg-orange items-center hover:bg-black hover:text-white transition-colors duration-300 group w-full sm:w-max flex justify-center ml-auto text-s lg:text-m lg:gap-16 gap-4"
-								href="#"
-								><span>Свіжі відгуки кожного дня в наших сторіс</span>
 
-								<span
-									href="#"
-									class="size-40 p-4 rounded lg:flex items-center justify-center transition-colors duration-300 border border-solid border-black group-hover:border-white"
-								>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="image size-full rounded-20 overflow-hidden">
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_1.png"
+                                                    alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="image size-full rounded-20 overflow-hidden">
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_2.png"
+                                                    alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="image size-full rounded-20 overflow-hidden">
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_1.png"
+                                                    alt=""
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                        class="rounded-30 bg-orange p-8 font-semibold uppercase top-8 left-8 sm:top-12 sm:left-12 absolute z-10"
+                                >
+                                    Bestseller
+                                </div>
+                            </div>
+                            <div
+                                    class="swiper sm:h-[4.9rem] sm:w-[1.4rem] !min-w-0 w-wull max-w-full"
+                                    data-swiper="productSliderNav"
+                            >
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+
+                                        <div
+                                                class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
+                                        >
+                                            <img width="601" height="758"
+                                                 src="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png"
+                                                 class="object-cover transition-opacity" alt="Відгук - №1"
+                                                 decoding="async" loading="lazy"
+                                                 srcset="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png 601w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-238x300.png 238w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-143x180.png 143w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-325x410.png 325w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-285x360.png 285w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-381x480.png 381w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-385x486.png 385w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-242x305.png 242w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-349x440.png 349w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-71x89.png 71w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-218x275.png 218w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-190x240.png 190w"
+                                                 sizes="auto, (max-width: 601px) 100vw, 601px">
+                                            <button data-video-play=""
+                                                    class="z-[5] group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-36 flex items-center justify-center">
+                                                <svg class="size-full fill-white  group-hover:fill-orange transition-colors duration-300">
+                                                    <use href="#icon-play"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div
+                                                class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
+                                        >
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_1.png"
+                                                    alt="image"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div
+                                                class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
+                                        >
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_2.png"
+                                                    alt="image"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div
+                                                class="w-[.79rem] h-[.6rem] sm:w-[1.4rem] sm:h-[1.08rem] overflow-hidden rounded-8 sm:rounded-20"
+                                        >
+                                            <img
+                                                    class="object-cover"
+                                                    src="@img/about_1.png"
+                                                    alt="image"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div
+                                class="bg-white w-full box-shadow rounded-20 sm:p-32 px-16 py-24 lg:min-h-[4.9rem] mb-32"
+                        >
+                            <h1 class="h3 mb-4 sm:mb-8">Зелена детокс крем-маска</h1>
+                            <div class="flex gap-14 sm:gap-50 items-center mb-4 sm:mb-8">
+                                <div class="font-semibold">Артикул: 00010001</div>
+                                <div class="py-8 px-24 rounded-20 bg-khaki font-medium">
+                                    В наявності
+                                </div>
+                            </div>
+                            <p class="mb-12 sm:mb-24">
+                                Зелена детокс-крем-маска BeeVibe — видаляє чорні цятки та
+                                глибоко очищає пори, створена для жирної та комбінованої
+                                шкіри.
+                            </p>
+                            <div class="flex gap-16 items-center mb-12 sm:mb-16">
+                                <label class="font-semibold">Об’єм</label>
+                                <div class="flex flex-wrap gap-16 items-center">
+                                    <button class="volume-btn btn-outline">50мл</button>
+                                    <button class="volume-btn btn-outline active">
+                                        100мл
+                                    </button>
+                                    <button class="volume-btn btn-outline">200мл</button>
+                                    <button class="volume-btn btn-outline">200мл</button>
+                                </div>
+                            </div>
+                            <div class="flex gap-16 items-center mb-12 sm:mb-16">
+                                <label class="font-semibold">Кількість</label>
+                                <div
+                                        class="quantity-selector border border-solid border-black rounded-30 gap-24 py-8 px-16"
+                                >
+                                    <button class="qty-btn mr-24" data-action="decrease">
+                                        -
+                                    </button>
+                                    <input
+                                            type="number"
+                                            min="1"
+                                            value="1"
+                                            class="qty-input w-36 text-center"
+                                    />
+                                    <button class="qty-btn ml-24" data-action="increase">
+                                        +
+                                    </button>
+                                </div>
+                            </div>
+                            <div
+                                    class="flex items-center gap-24 mb-12 sm:mb-50 flex-wrap sm:flex-nowrap"
+                            >
+                                <h2 class="h3 font-semibold flex-shrink-0">450 грн</h2>
+                                <s class="text-gray flex-shrink-0">550 грн</s>
+                                <button class="btn-black w-full">В кошик</button>
+                            </div>
+                            <div class="flex gap-4 sm:gap-16 text-s sm:text-m">
+                                <svg class="size-40 fill-black block flex-shrink-0">
+                                    <use href="#delivery-icon"></use>
+                                </svg>
+                                <p>
+                                    Доставка по Україні здійснюється Новою поштою. Вартість
+                                    доставки розраховується поштовою службою
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tabs-customize">
+                            <div class="flex gap-8 mb-16 overflow-x-scroll">
+                                <div
+                                        class="btn-outline btn-customize cursor-pointer flex-shrink-0"
+                                >
+                                    Опис товару
+                                </div>
+                                <div
+                                        class="btn-outline btn-customize cursor-pointer flex-shrink-0"
+                                >
+                                    Характеристика
+                                </div>
+                                <div
+                                        class="btn-outline btn-customize cursor-pointer flex-shrink-0"
+                                >
+                                    Активні компоненти
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="content-customize overflow-hidden bg-bg">
+                                    Антицелюлітний скраб, що робить шкіру неймовірно
+                                    гладенькою та пружною вже після кількох
+                                    використань. Завдяки кавовим частинкам, він ефективно
+                                    відлущує ороговілі клітини, бореться з проявами целюліту
+                                    та повертає шкірі тонус. Під час масажу скраб
+                                    перетворюється на ніжне молочко завдяки натуральним оліям,
+                                    які глибоко живлять і зволожують шкіру. Після процедури
+                                    шкіра буде шовковистою на дотик, неймовірно гладкою, а
+                                    насичений кавовий аромат залишиться на тілі
+                                </div>
+                                <div
+                                        class="content-customize overflow-hidden bg-bg grid grid-cols-[1fr,3fr] gap-x-16"
+                                >
+                                    <div class="font-semibold">Тип засобу:</div>
+                                    <div>кремова детокс-маска</div>
+                                    <div class="font-semibold">Для кого:</div>
+                                    <div>
+                                        жирна та комбінована шкіра, схильна до комедонів,
+                                        висипань і жирного блиску
+                                    </div>
+                                    <div class="font-semibold">Основні ефекти:</div>
+                                    <ul>
+                                        <li>• очищення пор та видалення чорних цяток</li>
+                                        <li>• зменшення висипань</li>
+                                        <li>• матування без пересушування</li>
+                                        <li>• заспокійливий та протизапальний ефект</li>
+                                    </ul>
+                                    <div class="font-semibold">Активні компоненти:</div>
+                                    <div>
+                                        жирна та комбінована шкіра, схильна до комедонів,
+                                        висипань і жирного блиску
+                                    </div>
+                                    <div class="font-semibold">Текстура:</div>
+                                    <div>кремова, легко наноситься і змивається</div>
+                                    <div class="font-semibold">Застосування:</div>
+                                    <div>
+                                        2–3 рази на тиждень на очищену шкіру на 10–15 хвилин
+                                    </div>
+                                    <div class="font-semibold">Колір:</div>
+                                    <div>
+                                        зелений (може змінюватися через натуральні пігменти — це
+                                        нормально)
+                                    </div>
+                                </div>
+                                <div class="content-customize overflow-hidden bg-bg">
+                                    <ul>
+                                        <li>
+                                            • Біла та зелена глина — вбирають зайвий жир і
+                                            очищають пори.
+                                        </li>
+                                        <li>
+                                            • Саліцилова кислота — розчиняє забруднення всередині
+                                            пор і зменшує акне
+                                        </li>
+                                        <li>
+                                            • Спіруліна — природний компонент, який заспокоює
+                                            шкіру, зменшує почервоніння
+                                        </li>
+                                        <li>
+                                            • Масляний екстракт прополісу — антибактеріальний та
+                                            заспокійливий ефект
+                                        </li>
+                                        <li>
+                                            • Пудра HIM — регулює жирність і бореться з
+                                            висипаннями
+                                        </li>
+                                        <li>
+                                            •  Мед   – живить шкіру, пом’якшує її та допомагає
+                                            швидше загоювати дрібні запалення.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[.64rem] lg:mb-[1.1rem] pr-32">
+            <div class="lg:px-[var(--container-gap)] pl-[var(--container-gap)]">
+                <div
+                        class="lg:flex justify-between mb-16 sm:mb-36 pr-[var(--container-gap)] lg:pr-0"
+                >
+                    <h2 class="mb-24 lg:mb-0">
+                        <span class="lg:block">500+ реальних відгуків</span>
+                    </h2>
+
+                    <a
+                            class="py-8 sm:pl-40 pr-8 text-black rounded-30 bg-orange items-center hover:bg-black hover:text-white transition-colors duration-300 group w-full sm:w-max flex justify-center ml-auto text-s lg:text-m lg:gap-16 gap-4"
+                            href="#"
+                    ><span>Свіжі відгуки кожного дня в наших сторіс</span>
+
+                        <span
+                                href="#"
+                                class="size-40 p-4 rounded lg:flex items-center justify-center transition-colors duration-300 border border-solid border-black group-hover:border-white"
+                        >
 									<svg
-										class="size-full group-hover:fill-white transition-colors duration-300 ease-linear fill-black"
-									>
+                                            class="size-full group-hover:fill-white transition-colors duration-300 ease-linear fill-black"
+                                    >
 										<use href="#instagram-icon"></use>
 									</svg>
 								</span>
-							</a>
-						</div>
+                    </a>
+                </div>
 
-						<div class="tabs-container">
-							<div class="mb-16">
-								<div
-									class="flex gap-16 overflow-x-scroll tab__buttons leading-snug mb-16"
-								>
-									<div
-										class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
-									>
-										Відгуки
-									</div>
-									<div
-										class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
-									>
-										Відео відгуки
-									</div>
-								</div>
+                <div class="tabs-container">
+                    <div class="mb-16">
+                        <div
+                                class="flex gap-16 overflow-x-scroll tab__buttons leading-snug mb-16"
+                        >
+                            <div
+                                    class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
+                            >
+                                Відгуки
+                            </div>
+                            <div
+                                    class="tab__button py-8 px-40 rounded-30 font-semibold border border-solid border-gray cursor-pointer hover:bg-black hover:border-black hover:text-white duration-300 transition-colors ease-linear flex-shrink-0 text-gray lg:min-w-[2.95rem] flex-center"
+                            >
+                                Відео відгуки
+                            </div>
+                        </div>
 
-								<div class="relative tab__contents">
-									<div
-										class="tab__content opacity-0 bg-bg transition-opacity duration-300 ease-linear"
-									>
-										<div class="swiper mb-40" data-swiper="reviewsSlider">
-											<div class="swiper-wrapper mb-24">
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div
-												class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-											>
-												<div class="slider-btn prev">
-													<svg
-														class="size-full d fill-transparent stroke-black rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-												<div class="slider-btn next">
-													<svg
-														class="size-full d fill-transparent stroke-black -rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div
-										class="tab__content absolute top-0 opacity-0 bg-bg transition-opacity duration-300 ease-linear min-w-0 w-full"
-									>
-										<div class="swiper mb-40" data-swiper="reviewsVideoSlider">
-											<div class="swiper-wrapper mb-24">
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div
-														class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
-													>
-														<div class="image size-full">
-															<img
-																class="object-contain"
-																src="@img/review.png"
-																alt="review"
-															/>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div
-												class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-											>
-												<div class="slider-btn prev">
-													<svg
-														class="size-full d fill-transparent stroke-black rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-												<div class="slider-btn next">
-													<svg
-														class="size-full d fill-transparent stroke-black -rotate-90"
-													>
-														<use xlink:href="#cheven-icon"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="mb-[.64rem] lg:mb-[1.1rem]">
-					<div class="container">
-						<h2 class="lg:w-1/2 mb-16 sm:mb-36">
-							Результат використання косметики BeeVibe
-						</h2>
-						<div class="swiper" data-swiper="resultsSwiper">
-							<div class="swiper-wrapper mb-24">
-								<div class="swiper-slide">
-									<div class="flex h-[2.18rem] sm:h-[3.88rem]">
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/before.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												До
-											</div>
-										</div>
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/after.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												Після
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="flex h-[2.18rem] sm:h-[3.88rem]">
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/before.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												До
-											</div>
-										</div>
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/after.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												Після
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="flex h-[2.18rem] sm:h-[3.88rem]">
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/before.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												До
-											</div>
-										</div>
-										<div
-											class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
-										>
-											<img
-												class="!object-cover"
-												src="@img/after.png"
-												alt="before"
-											/>
-											<div
-												class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
-											>
-												Після
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div
-								class="flex justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-							>
-								<div class="slider-btn prev">
-									<svg
-										class="size-full d fill-transparent stroke-black rotate-90"
-									>
-										<use xlink:href="#cheven-icon"></use>
-									</svg>
-								</div>
-								<div class="slider-btn next">
-									<svg
-										class="size-full d fill-transparent stroke-black -rotate-90"
-									>
-										<use xlink:href="#cheven-icon"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="mb-[.64rem] lg:mb-[1.1rem]">
-					<div class="container">
-						<h2 class="mb-16 sm:mb-36">Часто купують разом</h2>
-					</div>
-					<div class="pl-[var(--container-gap)] lg:px-[var(--container-gap)]">
-						<div class="swiper" data-swiper="topSalesSlider">
-							<div class="swiper-wrapper pt-6 pb-24 sm:pb-32">
-								<div class="swiper-slide">
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<div
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</div>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="#"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<div
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</div>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<!-- <div class="line-through text-gray text-s">550 грн</div> -->
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="#"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<div
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</div>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<!-- <div class="line-through text-gray text-s">550 грн</div> -->
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="#"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div
-										class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
-									>
-										<div
-											class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
-										>
-											<img src="@img/top-sales.png" alt="top-sales" />
-										</div>
-										<h3 class="h4 font-semibold mb-4 sm:mb-8">
-											Крем-маска для нормальної шкіри
-										</h3>
-										<div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
-										<div class="flex justify-between items-center">
-											<div class="sm:text-[.2rem] font-semibold">450 грн</div>
-											<div class="line-through text-gray text-s">550 грн</div>
-											<div class="flex flex-shrink-0 gap-8">
-												<a
-													href="#"
-													class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
-												>
-													<svg
-														class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
-													>
-														<use href="#arrow-icon"></use>
-													</svg>
-												</a>
-												<button
-													class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
-												>
-													<svg
-														class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-													>
-														<use href="#basket-icon"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-										<div class="flex absolute -top-6">
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
-											>
-												Bestseller
-											</div>
-											<div
-												class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
-											>
-												sale
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div
-								class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
-							>
-								<div class="slider-btn prev">
-									<svg
-										class="size-full d fill-transparent stroke-black rotate-90"
-									>
-										<use xlink:href="#cheven-icon"></use>
-									</svg>
-								</div>
-								<div class="slider-btn next">
-									<svg
-										class="size-full d fill-transparent stroke-black -rotate-90"
-									>
-										<use xlink:href="#cheven-icon"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
+                        <div class="relative tab__contents">
+                            <div
+                                    class="tab__content opacity-0 bg-bg transition-opacity duration-300 ease-linear"
+                            >
+                                <div class="swiper mb-40" data-swiper="reviewsSlider">
+                                    <div class="swiper-wrapper mb-24">
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                    >
+                                        <div class="slider-btn prev">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="slider-btn next">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black -rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                    class="tab__content absolute top-0 opacity-0 bg-bg transition-opacity duration-300 ease-linear min-w-0 w-full"
+                            >
+                                <div class="swiper mb-40" data-swiper="reviewsVideoSlider">
+                                    <div class="swiper-wrapper mb-24">
+                                        <div class="swiper-slide">
+                                            <div class="border video-item  relative border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30">
+                                                <div class="image size-full">
+                                                    <img width="601" height="758"
+                                                         src="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png"
+                                                         class="object-cover transition-opacity" alt="Відгук - №1"
+                                                         decoding="async" loading="lazy"
+                                                         srcset="https://beevibe.com.ua/wp-content/uploads/2025/04/after.png 601w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-238x300.png 238w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-143x180.png 143w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-325x410.png 325w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-285x360.png 285w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-381x480.png 381w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-385x486.png 385w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-242x305.png 242w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-349x440.png 349w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-71x89.png 71w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-218x275.png 218w, https://beevibe.com.ua/wp-content/uploads/2025/04/after-190x240.png 190w"
+                                                         sizes="auto, (max-width: 601px) 100vw, 601px">
+                                                    <button data-video-play=""
+                                                            class="z-[5] group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[.6rem] flex items-center justify-center">
+                                                        <svg class="size-full fill-white  group-hover:fill-orange transition-colors duration-300">
+                                                            <use href="#icon-play"></use>
+                                                        </svg>
+                                                    </button>
 
-			@@include('html/_footer.html',{})
-		</div>
-		@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
-		<script src="js/app.min.js"></script>
-		<script src="js/product.min.js"></script>
-	</body>
+                                                </div>
+
+                                                <div class="video-container  absolute w-full h-full"
+                                                     data-video="https://beevibe.com.ua/wp-content/uploads/2025/04/img_4885.mp4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div
+                                                    class="border border-solid border-black overflow-hidden h-[3.6rem] sm:h-[4.25rem] rounded-30"
+                                            >
+                                                <div class="image size-full">
+                                                    <img
+                                                            class="object-contain"
+                                                            src="@img/review.png"
+                                                            alt="review"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                    >
+                                        <div class="slider-btn prev">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="slider-btn next">
+                                            <svg
+                                                    class="size-full d fill-transparent stroke-black -rotate-90"
+                                            >
+                                                <use xlink:href="#cheven-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[.64rem] lg:mb-[1.1rem]">
+            <div class="container">
+                <h2 class="lg:w-1/2 mb-16 sm:mb-36">
+                    Результат використання косметики BeeVibe
+                </h2>
+                <div class="swiper" data-swiper="resultsSwiper">
+                    <div class="swiper-wrapper mb-24">
+                        <div class="swiper-slide">
+                            <div class="flex h-[2.18rem] sm:h-[3.88rem]">
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/before.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        До
+                                    </div>
+                                </div>
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/after.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        Після
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex h-[2.18rem] sm:h-[3.88rem]">
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/before.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        До
+                                    </div>
+                                </div>
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/after.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        Після
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex h-[2.18rem] sm:h-[3.88rem]">
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/before.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        До
+                                    </div>
+                                </div>
+                                <div
+                                        class="image h-full w-1/2 rounded-[.2rem] overflow-hidden"
+                                >
+                                    <img
+                                            class="!object-cover"
+                                            src="@img/after.png"
+                                            alt="before"
+                                    />
+                                    <div
+                                            class="rounded-30 p-8 bg-white font-bold absolute top-8 left-8 min-w-[.7rem] text-center text-s sm:text-m"
+                                    >
+                                        Після
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="flex justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                    >
+                        <div class="slider-btn prev">
+                            <svg
+                                    class="size-full d fill-transparent stroke-black rotate-90"
+                            >
+                                <use xlink:href="#cheven-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="slider-btn next">
+                            <svg
+                                    class="size-full d fill-transparent stroke-black -rotate-90"
+                            >
+                                <use xlink:href="#cheven-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mb-[.64rem] lg:mb-[1.1rem]">
+            <div class="container">
+                <h2 class="mb-16 sm:mb-36">Часто купують разом</h2>
+            </div>
+            <div class="pl-[var(--container-gap)] lg:px-[var(--container-gap)]">
+                <div class="swiper" data-swiper="topSalesSlider">
+                    <div class="swiper-wrapper pt-6 pb-24 sm:pb-32">
+                        <div class="swiper-slide">
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+                            >
+                                <div
+                                        class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </div>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                    <div class="line-through text-gray text-s">550 грн</div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="#"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
+                                    >
+                                        sale
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+                            >
+                                <div
+                                        class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </div>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                    <!-- <div class="line-through text-gray text-s">550 грн</div> -->
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="#"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+                            >
+                                <div
+                                        class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </div>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                    <!-- <div class="line-through text-gray text-s">550 грн</div> -->
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="#"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                    class="p-8 sm:p-12 bg-white rounded-30 relative box-shadow"
+                            >
+                                <div
+                                        class="image w-full pt-[97%] rounded-30 overflow-hidden mb-8 sm:mb-16"
+                                >
+                                    <img src="@img/top-sales.png" alt="top-sales"/>
+                                </div>
+                                <h3 class="h4 font-semibold mb-4 sm:mb-8">
+                                    Крем-маска для нормальної шкіри
+                                </h3>
+                                <div class="mb-4 sm:mb-8 text-s sm:text-m">100 мл</div>
+                                <div class="flex justify-between items-center">
+                                    <div class="sm:text-[.2rem] font-semibold">450 грн</div>
+                                    <div class="line-through text-gray text-s">550 грн</div>
+                                    <div class="flex flex-shrink-0 gap-8">
+                                        <a
+                                                href="#"
+                                                class="size-[.48rem] rounded items-center justify-center transition-colors duration-300 bg-transparent lg:hover:bg-light-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:flex-center lg:hover:border-light-orange hidden"
+                                        >
+                                            <svg
+                                                    class="size-24 fill-none transition-colors duration-300 ease-linear stroke-black"
+                                            >
+                                                <use href="#arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <button
+                                                class="size-40 sm:size-[.48rem] rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group ml-auto lg:ml-0 flex-shrink-0 border border-solid border-black lg:hover:border-orange"
+                                        >
+                                            <svg
+                                                    class="size-24 sm:size-[.29rem] fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
+                                            >
+                                                <use href="#basket-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex absolute -top-6">
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-orange"
+                                    >
+                                        Bestseller
+                                    </div>
+                                    <div
+                                            class="p-8 uppercase text-s font-bold rounded-30 bg-red text-white"
+                                    >
+                                        sale
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                            class="flex swiper-navigation justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                    >
+                        <button class="slider-btn prev swiper-button">
+                            <svg
+                                    class="size-full d fill-transparent stroke-black rotate-90"
+                            >
+                                <use xlink:href="#cheven-icon"></use>
+                            </svg>
+                        </button>
+                        <button class="slider-btn next swiper-button">
+                            <svg
+                                    class="size-full bg-gray block disabled d fill-transparent stroke-black -rotate-90"
+                            >
+                                <use xlink:href="#cheven-icon"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('html/_footer.html',{})
+</div>
+@@include('html/_modal.htm',{}) @@include('html/_svg.html',{})
+<script src="js/app.min.js"></script>
+<script src="js/product.min.js"></script>
+</body>
 </html>

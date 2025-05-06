@@ -17,6 +17,7 @@
 
 defined('ABSPATH') || exit;
 $total = wc_get_loop_prop('total');
+global $wp_query;
 get_header(); ?>
     <main>
         <section
@@ -50,180 +51,7 @@ get_header(); ?>
                             <use xlink:href="#cheven-icon"></use>
                         </svg>
                     </div>
-                    <div class="flex justify-end lg:justify-between items-center">
-                        <div class="lg:gap-4 hidden lg:flex items-center gap-8">
-                            <div class="text-gray"><?= $total . ' ' . get_products_word_form($total) ?></div>
-                            <div class="flex items-center gap-8">
-
-                            </div>
-                            <!--                            <div-->
-                            <!--                                    class="rounded-30 bg-light-orange p-8 flex gap-4 cursor-pointer items-center"-->
-                            <!--                            >-->
-                            <!--                                <span>Тіло</span>-->
-                            <!--                                <span-->
-                            <!--                                        class="block relative size-16 before:absolute before:h-[1px] before:w-14 before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 after:absolute after:w-[1px] after:h-14 after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 before:rotate-45 after:rotate-45 hover:scale-[1.15] transition-transform duration-300"-->
-                            <!--                                ></span>-->
-                            <!--                            </div>-->
-
-                        </div>
-
-                        <div class="dropdown relative ml-auto z-20">
-                            <div
-                                    class="dropdown__btn sm:min-w-[2.9rem] flex gap-8 border border-solid border-black px-8 sm:px-12 py-8 rounded-30 cursor-pointer justify-between bg-bg relative z-10"
-                            >
-										<span
-                                                class="dropdown__active hidden sm:block"
-                                                data-active=""
-                                                data-selected=""
-                                        ><span></span>
-										</span>
-                                <span
-                                        class="dropdown__icon transition-transform duration-300 hidden sm:block"
-                                >
-											<svg class="size-24 fill-none stroke-black">
-												<use xlink:href="#cheven-icon"></use>
-											</svg>
-										</span>
-                                <svg
-                                        class="size-24 stroke-black fill-transparent sm:hidden"
-                                >
-                                    <use xlink:href="#sorting-icon"></use>
-                                </svg>
-                            </div>
-                            <div
-                                    class="dropdown__content pt-32 pb-16 opacity-0 rounded-20 bg-black box-shadow absolute right-0 w-max sm:w-full top-1/2 text-white transition-opacity duration-300 ease-linear"
-                            >
-                                <ul class="dropdown__list">
-                                    <li
-                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-                                    >
-                                        Сoртувати за замовчуванням
-                                    </li>
-                                    <li
-                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-                                    >
-                                        Сортувати від нових
-                                    </li>
-                                    <li
-                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-                                    >
-                                        Сортувати від старих
-                                    </li>
-                                    <li
-                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-                                    >
-                                        Сортувати від більшої ціни
-                                    </li>
-                                    <li
-                                            class="dropdown__item cursor-pointer mb-8 last:mb-0 lg:hover:bg-orange transition-colors duration-300 px-16"
-                                    >
-                                        Сортувати від нижчої ціни
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                            class="projects-filter w-[2.9rem] lg:w-full overflow-x-scroll px-16 pt-40 pb-24 lg:py-24 bg-black lg:bg-transparent absolute lg:static top-32 lg:top-auto rounded-[.15rem] -left-[3.5rem] z-20 transition-transform duration-300 border border-solid border-black text-white lg:text-black h-max"
-                    >
-                        <form action="#">
-                            <div class="range mb-32">
-                                <div class="h4 mb-10 font-semibold">Ціна</div>
-                                <div class="range__control mb-20">
-                                    <input
-                                            id="fromSlider"
-                                            data-range="min"
-                                            step="100"
-                                            type="range"
-                                            value="0"
-                                            min="0"
-                                            max="60000"
-                                            class="!text-white lg:!text-black"
-                                    />
-                                    <input
-                                            id="toSlider"
-                                            data-range="max"
-                                            step="100"
-                                            type="range"
-                                            value="60000"
-                                            min="0"
-                                            max="60000"
-                                    />
-                                </div>
-                                <div
-                                        class="grid range__value grid-cols-2 gap-x-16 mb-20 range__number"
-                                >
-                                    <div class="!text-white lg:!text-black" data-price="min">
-                                        3000 грн
-                                    </div>
-                                    <div class="!text-white lg:!text-black" data-price="max">
-                                        99 999 грн
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-filter accordion--open mb-24 last:mb-0">
-                                <div
-                                        class="accordion-filter-header cursor-pointer flex items-center justify-between lg:hover:text-blue duration-300 transition-colors font-semibold lg:hover:text-orange h4"
-                                >
-                                    <span>Категорії </span>
-
-                                    <svg
-                                            class="size-24 fill-none stroke-white lg:stroke-black"
-                                    >
-                                        <use xlink:href="#cheven-icon"></use>
-                                    </svg>
-                                </div>
-                                <div
-                                        class="accordion-filter-content max-h-0 overflow-hidden transition-[max-height] active font-medium mb-24 last:mb-0"
-                                >
-                                    <?php
-                                    // Получаем все категории товаров
-                                    $terms = get_terms(array(
-                                        'taxonomy' => 'product_cat',
-                                        'orderby' => 'name',
-                                        'order' => 'ASC',
-                                        'hide_empty' => false,
-                                    ));
-
-                                    if ($terms) {
-                                        foreach ($terms as $term) {
-                                            if ($term->term_id === 15) continue;
-                                            $product_count = $term->count; ?>
-
-
-                                            <div class="pt-8">
-                                                <label
-                                                        class="checkbox flex items-center gap-16 w-max cursor-pointer lg:hover:text-orange transition-colors duration-300 mb-12 last:mb-0"
-                                                >
-                                                    <input value="<?= $term->term_id ?>" type="checkbox"
-                                                           class="hidden"/>
-                                                    <span
-                                                            class="size-32 border border-solid border-white lg:border-black rounded-8 relative flex-center transition-colors duration-300 before:transition-colors before:duration-300"
-                                                    ><svg
-                                                                class="size-24 fill-none transition-colors duration-300 ease-linear"
-                                                        >
-															<use href="#check-icon"></use>
-														</svg>
-													</span>
-                                                    <?= esc_html($term->name) ?> <span
-                                                            class="ml-16"><?= $product_count ?></span>
-                                                </label>
-                                            </div>
-                                        <?php }
-                                    }
-                                    ?>
-
-                                </div>
-                            </div>
-
-                            <button
-                                    class="bg-orange rounded-30 text-black lg:bg-transparent lg:btn-outline uppercase w-full py-12"
-                            >
-                                фільтрувати
-                            </button>
-                        </form>
-                    </div>
+                    <?= get_template_part('template-parts/blocks/filter'); ?>
                     <div class="col-start-1 col-end-3 lg:col-start-2 lg:col-end-3">
                         <?php
                         if (woocommerce_product_loop()) {
@@ -232,15 +60,14 @@ get_header(); ?>
                              * Hook: woocommerce_before_shop_loop.
                              *
                              * @hooked woocommerce_output_all_notices - 10
-                             * @hooked woocommerce_result_count - 20
                              * @hooked woocommerce_catalog_ordering - 30
                              */
 //                                do_action('woocommerce_before_shop_loop');
-
                             woocommerce_product_loop_start();
 
                             if (wc_get_loop_prop('total')) {
                                 while (have_posts()) {
+//                                    var_dump(the_post());
                                     the_post();
 
                                     /**
@@ -268,31 +95,36 @@ get_header(); ?>
                              */
                             do_action('woocommerce_no_products_found');
                         } ?>
-                        <div
-                                class="flex gap-16 justify-center mx-center mb-36 sm:mb-0 items-center gap-5"
-                        >
-                            <button class="slider-btn">
-                                <svg
-                                        class="size-full d fill-transparent stroke-black rotate-90"
-                                >
-                                    <use xlink:href="#cheven-icon"></use>
-                                </svg>
-                            </button>
-                            <span class="text-blue font-medium"> 1, 2,3....6 </span>
-                            <button class="slider-btn next">
-                                <svg
-                                        class="size-full d fill-transparent stroke-black -rotate-90"
-                                >
-                                    <use xlink:href="#cheven-icon"></use>
-                                </svg>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <?= get_template_part('template-parts/blocks/reviews'); ?>
         <?= get_template_part('template-parts/blocks/form'); ?>
+        <div class="w-screen h-screen preloader hide flex items-center justify-center fixed top-0 z-50">
+            <div class="size-[1.3rem]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)">
+                        <stop offset="0" stop-color="#ffffff"></stop>
+                        <stop offset=".3" stop-color="#ffffff" stop-opacity=".9"></stop>
+                        <stop offset=".6" stop-color="#ffffff" stop-opacity=".6"></stop>
+                        <stop offset=".8" stop-color="#ffffff" stop-opacity=".3"></stop>
+                        <stop offset="1" stop-color="#ffffff" stop-opacity="0"></stop>
+                    </radialGradient>
+                    <circle transform-origin="center" fill="none" stroke="url(#a12)" stroke-width="15"
+                            stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100"
+                            r="70">
+                        <animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2"
+                                          values="360;0"
+                                          keyTimes="0;1" keySplines="0 0 1 1"
+                                          repeatCount="indefinite"></animateTransform>
+                    </circle>
+                    <circle transform-origin="center" fill="none" opacity=".2" stroke="#ffffff" stroke-width="15"
+                            stroke-linecap="round" cx="100" cy="100" r="70"></circle>
+                </svg>
+            </div>
+
+        </div>
     </main>
 <?php
 

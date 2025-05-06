@@ -24,11 +24,19 @@
             rel="stylesheet"
     />
     <?php wp_head(); ?>
+    <?php if (is_product()): ?>
+        <script>
+            const product = <?php echo json_encode(get_product_by_id(get_the_ID())); ?>;
+        </script>
+    <?php endif;
+    $cart_count = WC()->cart->get_cart_contents_count();
+    ?>
+
 </head>
 
 <body <?php body_class('body text-dark-blue'); ?>>
 <?php wp_body_open(); ?>
-<div  class="page-container">
+<div class="page-container">
     <header
             class="h-[var(--header-height)] py-14 lg:py-16 flex z-50 w-full transition-transform duration-500 ease-linear top-0 right-0 left-0 fixed"
     >
@@ -208,14 +216,15 @@
                     </div>
                 </div>
 
-                <button
-                        class="size-32 rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group mr-8 lg:mr-12 ml-auto lg:ml-0"
-                >
-                    <svg
-                            class="size-24 fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black"
-                    >
+                <button class="size-32 relative cart-trigger rounded flex items-center justify-center transition-colors duration-300 bg-black pb-6 lg:hover:bg-orange group mr-8 lg:mr-12 ml-auto lg:ml-0">
+                    <svg class="size-24 fill-none stroke-white transition-colors duration-300 ease-linear group-hover:stroke-black">
                         <use href="#basket-icon"></use>
                     </svg>
+                    <span data-cart-count
+                          class="absolute rounded size-16 <?= $cart_count ? ' flex' : ' hidden'; ?>  items-center z-[2] -bottom-[.02rem] -right-[.02rem] justify-center bg-orange text-[.12rem]  font-medium">
+					   <?= $cart_count ? $cart_count : '' ?>
+				    </span>
+
                 </button>
                 <a
                         href="#"
@@ -228,10 +237,10 @@
                     </svg>
                 </a>
 
-                <button class="burger lg:hidden">
-                    <div class="line">
+                <button class="burger flex lg:hidden">
+                    <span class="line">
                         <span></span>
-                    </div>
+                    </span>
                 </button>
             </div>
         </div>

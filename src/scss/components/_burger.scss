@@ -8,9 +8,6 @@
 	color: inherit;
 	cursor: pointer;
 	z-index: 4;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	transition: border 0.3s;
 	&:focus {
 		outline: none;

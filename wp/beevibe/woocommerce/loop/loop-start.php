@@ -19,6 +19,6 @@ if (!defined('ABSPATH')) {
     exit;
 }
 ?>
-<div
+<div data-container
         class="grid grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-10 lg:gap-20 mb-24 sm:mb-36"
 >

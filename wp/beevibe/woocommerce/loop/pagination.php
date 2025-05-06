@@ -40,9 +40,16 @@ if ($total <= 1) {
                 'add_args' => false,
                 'current' => max(1, $current),
                 'total' => $total,
-                'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
-                'next_text' => is_rtl() ? '&larr;' : '&rarr;',
-                'type' => 'list',
+                'prev_text' => '<button class="slider-btn ">
+                                <svg class="size-full d fill-transparent stroke-black rotate-90">
+                                    <use xlink:href="#cheven-icon"></use>
+                                </svg>
+                            </button>',
+                'next_text' => '<button class="slider-btn next">
+                                <svg class="size-full d fill-transparent stroke-black -rotate-90">
+                                    <use xlink:href="#cheven-icon"></use>
+                                </svg>
+                            </button>',
                 'end_size' => 3,
                 'mid_size' => 3,
             )

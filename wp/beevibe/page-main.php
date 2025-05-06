@@ -32,7 +32,7 @@ get_header();
                                         </div>
                                         <h1 class="hidden">BeeVibe</h1>
                                         <a href="/shop/"
-                                                class="btn-black absolute left-[.22rem] sm:left-40 bottom-40 lg:left-100 lg:bottom-100"
+                                           class="btn-black absolute left-[.22rem] sm:left-40 bottom-40 lg:left-100 lg:bottom-100"
                                         >
                                             Купити
                                         </a>
@@ -276,16 +276,16 @@ get_header();
                         </div>
                     </div>
                     <div
-                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                            class="flex  swiper-navigation justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                     >
-                        <div class="slider-btn prev">
+                        <div class="slider-btn  swiper-button prev">
                             <svg
                                     class="size-full d fill-transparent stroke-black rotate-90"
                             >
                                 <use xlink:href="#cheven-icon"></use>
                             </svg>
                         </div>
-                        <div class="slider-btn next">
+                        <div class="slider-btn  swiper-button next">
                             <svg
                                     class="size-full d fill-transparent stroke-black -rotate-90"
                             >
@@ -505,16 +505,16 @@ get_header();
                         </div>
                     </div>
                     <div
-                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                            class="flex  swiper-navigation justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                     >
-                        <div class="slider-btn prev">
+                        <div class="slider-btn  swiper-button prev">
                             <svg
                                     class="size-full d fill-transparent stroke-black rotate-90"
                             >
                                 <use xlink:href="#cheven-icon"></use>
                             </svg>
                         </div>
-                        <div class="slider-btn next">
+                        <div class="slider-btn  swiper-button next">
                             <svg
                                     class="size-full d fill-transparent stroke-black -rotate-90"
                             >
@@ -642,16 +642,16 @@ get_header();
                                         </div>
                                     </div>
                                     <div
-                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0  swiper-navigation"
                                     >
-                                        <div class="slider-btn prev">
+                                        <div class="slider-btn  swiper-button prev">
                                             <svg
                                                     class="size-full d fill-transparent stroke-black rotate-90"
                                             >
                                                 <use xlink:href="#cheven-icon"></use>
                                             </svg>
                                         </div>
-                                        <div class="slider-btn next">
+                                        <div class="slider-btn  swiper-button next">
                                             <svg
                                                     class="size-full d fill-transparent stroke-black -rotate-90"
                                             >
@@ -733,16 +733,16 @@ get_header();
                                         </div>
                                     </div>
                                     <div
-                                            class="flex justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                                            class="flex  swiper-navigation justify-end sm:justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                                     >
-                                        <div class="slider-btn prev">
+                                        <div class="slider-btn  swiper-button prev">
                                             <svg
                                                     class="size-full d fill-transparent stroke-black rotate-90"
                                             >
                                                 <use xlink:href="#cheven-icon"></use>
                                             </svg>
                                         </div>
-                                        <div class="slider-btn next">
+                                        <div class="slider-btn  swiper-button next">
                                             <svg
                                                     class="size-full d fill-transparent stroke-black -rotate-90"
                                             >
@@ -862,16 +862,16 @@ get_header();
                         </div>
                     </div>
                     <div
-                            class="flex justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
+                            class="flex  swiper-navigation justify-center gap-16 pr-[var(--container-gap)] lg:pr-0"
                     >
-                        <div class="slider-btn prev">
+                        <div class="slider-btn  swiper-button prev">
                             <svg
                                     class="size-full d fill-transparent stroke-black rotate-90"
                             >
                                 <use xlink:href="#cheven-icon"></use>
                             </svg>
                         </div>
-                        <div class="slider-btn next">
+                        <div class="slider-btn  swiper-button next">
                             <svg
                                     class="size-full d fill-transparent stroke-black -rotate-90"
                             >
@@ -888,7 +888,7 @@ get_header();
                     <div
                             class="image w-full h-[4.57rem] rounded-30 overflow-hidden hidden lg:flex"
                     >
-                        <img src="@img/about_1.png" alt="about_photo"/>
+                        <img src="<?= get_img_link('about_1.webp') ?>" alt="about_photo"/>
                     </div>
                     <div class="lg:px-8 lg:py-32">
                         <h2 class="mb-16 sm:mb-24">Про BeeVibe</h2>
@@ -904,12 +904,12 @@ get_header();
                             компонентів, щоб ви були впевнені у якості кожного продукту.
                         </p>
                         <a
-                                href="@"
+                                href="/about/"
                                 class="flex items-center gap-16 font-bold group hover:text-orange transition-colors duration-300 ease-linear"
                         >
                             <span>Дізнатися більше</span>
                             <span
-                                    href="#"
+
                                     class="size-40 p-8 rounded flex items-center justify-center transition-colors duration-300 border border-solid border-black group-hover:border-light-orange group-hover:bg-light-orange"
                             >
 										<svg
@@ -924,74 +924,18 @@ get_header();
                     >
                         <img
                                 class="!object-cover"
-                                src="@img/about_2.png"
+                                src="<?= get_img_link('about_2.webp') ?>"
                                 alt="about_photo"
                         />
                     </div>
                 </div>
             </div>
         </section>
-        <section class="mb-[.64rem] lg:mb-[1.1rem]">
-            <div class="container">
-                <div class="grid lg:grid-cols-[2fr,1fr] orange-gradient rounded-30">
-                    <div class="sm:px-[.8rem] pt-50 pb-32 px-20 sm:py-100">
-                        <h2 class="mb-24">
-                            Потрібна допомога в підборі якісного догляду?
-                        </h2>
-                        <p class="h4 font-semibold lg:pr-100 mb-24">
-                            Наші менеджери допоможуть вам і залюбки дадуть відповідь на
-                            всі ваші питання
-                        </p>
-                        <form class="form text-blue max-w-[7.26rem]">
-                            <div
-                                    class="flex flex-wrap justify-between mx-auto gap-x-8 gap-y-24"
-                            >
-                                <div class="flex form-item flex-col w-full lg:w-[2.35rem]">
-                                    <label for="name-add" class="text-s font-semibold mb-4">
-                                        Ім’я</label
-                                    >
-                                    <input
-                                            type="text"
-                                            name="name"
-                                            id="name-calc"
-                                            class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
-                                    />
-                                    <div class="form-item__message"></div>
-                                </div>
-                                <div class="flex form-item flex-col w-full lg:w-[2.35rem]">
-                                    <label for="phone-add" class="text-s mb-4">
-                                        Номер телефона</label
-                                    >
-                                    <input
-                                            type="text"
-                                            name="phone"
-                                            id="phone-calc"
-                                            class="text-l h-[.54rem] border border-solid bg-transparent p-12 flex items-center rounded-30"
-                                    />
-                                    <div class="form-item__message"></div>
-                                </div>
-                                <button
-                                        type="submit"
-                                        class="btn-black h-[0.54rem] self-end w-full lg:w-auto"
-                                >
-                                    Відправити
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div
-                            class="image w-full h-[3.26rem] sm:h-[6rem] lg:h-full rounded-30 overflow-hidden"
-                    >
-                        <img class="object-cover" src="@img/form.png" alt="form_img"/>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?= get_template_part('template-parts/blocks/form'); ?>
     </main>
 
 
 
-    <!--        --><?php //= get_template_part('template-parts/blocks/team'); ?>
     <!--        --><?php //= get_template_part('template-parts/blocks/blog'); ?>
     <!--        --><?php //= get_template_part('template-parts/blocks/commentForm'); ?>
 

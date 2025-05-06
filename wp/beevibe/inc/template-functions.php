@@ -11,27 +11,9 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function drewush_body_classes( $classes ) {
-	// Adds a class of hfeed to non-singular pages.
-	if ( ! is_singular() ) {
-		$classes[] = 'hfeed';
-	}
-
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'drewush_body_classes' );
-
-/**
- * Add a pingback url auto-discovery header for single posts, pages, or attachments.
- */
-function drewush_pingback_header() {
-	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
-	}
-}
-add_action( 'wp_head', 'drewush_pingback_header' );
+add_action('template_redirect', function () {
+    if (trailingslashit($_SERVER['REQUEST_URI']) === '/shop/category/') {
+        wp_redirect(home_url('/shop/'), 301);
+        exit;
+    }
+});

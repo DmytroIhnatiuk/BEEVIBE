@@ -61,6 +61,20 @@ function dn_length_correct($string, $number)
         return $string;
     }
 }
+function get_price_by_currency($price, $skip_format = false)
+{
+    if ($skip_format) {
+        return $price;
+    }
 
+    return number_format($price, 0, '.', ' ');
+
+
+}
+
+function get_currency_symbol($currency = '')
+{
+    return get_woocommerce_currency_symbol();
+}
 
 

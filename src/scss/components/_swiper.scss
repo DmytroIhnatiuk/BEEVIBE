@@ -1,0 +1,14 @@
+[data-swiper="productSliderNav"] {
+  .swiper-slide {
+    opacity: .7;
+    transition: opacity .3s linear;
+    cursor: pointer;
+    &:hover {
+      opacity: 9;
+    }
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}
